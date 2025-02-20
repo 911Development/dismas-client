@@ -39,7 +39,7 @@ export default function Home() {
             <section className="border rounded-full inline-block text-start px-4 py-1 mb-8">
               <span className="text-xl">About</span>
             </section>
-            <section className="relative">
+            <section className="relative overflow-hidden">
               <p className="lg:w-[60%] text-xl">
                 Dismas is more than our name, it’s a symbol of who we are and
                 what we stand for. Historically, mottos were war-cries of
