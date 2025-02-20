@@ -35,7 +35,7 @@ export default function Home() {
               </p>
             </section>
           </section>
-          <section className="mb-96">
+          <section id="about" className="mb-96">
             <section className="border rounded-full inline-block text-start px-4 py-1 mb-8">
               <span className="text-xl">About</span>
             </section>
@@ -53,7 +53,7 @@ export default function Home() {
               />
             </section>
           </section>
-          <section className="lg:grid lg:grid-cols-12 mb-96">
+          <section id="projects" className="lg:grid lg:grid-cols-12 mb-96">
             <section className="lg:col-span-8 mb-12 lg:mb-0">
               <section className="border rounded-full inline-block px-4 py-1 mb-8">
                 <span className="text-xl">Projects</span>
@@ -100,7 +100,7 @@ export default function Home() {
               </Link>
             </section>
           </section>
-          <section className="flex items-center justify-center">
+          <section id="contact" className="flex items-center justify-center">
             <Link
               href={"/"}
               className="border rounded-full flex items-center justify-center px-4 py-1 mb-8"
