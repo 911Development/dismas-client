@@ -1,9 +1,31 @@
+import Link from "next/link";
+import Navbar from "./ui/Navbar";
+import Container from "./Container";
+
 const Layout = ({ children }) => {
   return (
     <>
-      <header></header>
+      <Navbar />
       <main>{children}</main>
-      <fooiter></fooiter>
+      <footer className="py-12">
+        <Container className="flex items-center justify-between">
+          <p>2025 based in Cyprus</p>
+          <nav>
+            <ul className="flex items-center justify-center gap-3">
+              <li>
+                <Link href={"/"} className="text-2xl">
+                  LinkedIn
+                </Link>
+              </li>
+              <li>
+                <Link href={"/"} className="text-2xl">
+                  Instragram
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </Container>
+      </footer>
     </>
   );
 };
