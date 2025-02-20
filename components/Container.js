@@ -1,5 +1,5 @@
-const Container = ({ className, children }) => (
-  <div className={`container w-3/4 mx-auto px-4 lg:px-12 ${className}`}>
+const Container = ({ id, className, children }) => (
+  <div id={id} className={`container !mx-auto px-4 ${className}`}>
     {children}
   </div>
 );

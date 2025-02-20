@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Container from "../Container";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   return (
@@ -8,7 +10,7 @@ const Navbar = () => {
         <Link href={"/"}>
           <h1 className="text-2xl font-bold">DISMAS STUDIO</h1>
         </Link>
-        <ul className="flex items-center gap-3">
+        <ul className="lg:flex items-center hidden gap-3">
           <li className="relative">
             <Link
               className="text-muted hover:text-white transition-all"
@@ -43,6 +45,7 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
+        <FontAwesomeIcon icon={faBars} size="lg" className="lg:hidden" />
       </Container>
     </nav>
   );
