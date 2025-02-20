@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
       <Navbar />
       <main className="">{children}</main>
       <footer className="py-12">
-        <Container className="flex items-center justify-between">
+        <Container className="flex !flex-row items-center justify-between">
           <p>2025 based in Cyprus</p>
           <nav>
             <ul className="flex items-center justify-center gap-3">

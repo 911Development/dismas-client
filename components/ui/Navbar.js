@@ -6,7 +6,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 const Navbar = () => {
   return (
     <nav className="py-12">
-      <Container className={"flex items-center justify-between"}>
+      <Container className={"flex !flex-row items-center justify-between"}>
         <Link href={"/"}>
           <h1 className="text-2xl font-bold">DISMAS STUDIO</h1>
         </Link>
@@ -45,7 +45,11 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-        <FontAwesomeIcon icon={faBars} size="lg" className="lg:hidden" />
+        <FontAwesomeIcon
+          icon={faBars}
+          size="xl"
+          className="lg:hidden ms-auto"
+        />
       </Container>
     </nav>
   );
