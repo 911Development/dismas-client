@@ -13,7 +13,7 @@ const SidebarHeader = ({ handleSidebar }) => {
   //   const { t } = useTranslation();
 
   return (
-    <section className="offcanvas-header bg-white dark:bg-black flex items-center sticky top-0 px-4 z-10 shadow-sm py-8">
+    <section className="offcanvas-header bg-white dark:bg-black flex items-center sticky top-0 px-4 z-10 shadow-sm py-6">
       <Link href={"/"}>
         <h1 className="text-2xl font-bold">DISMAS STUDIO</h1>
       </Link>
@@ -51,7 +51,7 @@ const SidebarBody = ({ handleSidebar }) => {
 
   return (
     <div className="offcanvas-body flex overflow-x-hidden mb-auto">
-      <section className="min-w-full y-6 px-4">
+      <section className="min-w-full py-6 px-4">
         {/* <section className="grid grid-cols-12 gap-3">
           <Link
             href={process.env.NEXT_PUBLIC_FACEBOOK}
@@ -80,8 +80,8 @@ const SidebarBody = ({ handleSidebar }) => {
             </p>
           </Link>
         </section> */}
-        <hr className="border-gray-600 my-8" />
-        <ul className="space-y-3">
+        {/* <hr className="border-gray-600 my-4" /> */}
+        <ul className="space-y-3 mb-12">
           <li>
             <h3 className="font-semibold px-4">MENU</h3>
           </li>
@@ -134,7 +134,38 @@ const SidebarBody = ({ handleSidebar }) => {
             </Link>
           </li>
         </ul>
-        <hr className="border-gray-600 my-8" />
+        <ul className="space-y-3">
+          <li>
+            <h3 className="font-semibold px-4">SOCIALS</h3>
+          </li>
+          <li>
+            <Link
+              href={"https://www.linkedin.com/"}
+              className={`flex items-center gap-2 rounded py-3 px-4 text-sm text-muted ${
+                pathname === "/about" && "bg-light dark:bg-dark text-primary"
+              }`}
+              target="_blank"
+              onClick={() => handleSidebar()}
+            >
+              {/* <FontAwesomeIcon icon={faInfoCircle} /> */}
+              <span className="text-lg">LINKEDIN</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href={"https://www.instagram.com"}
+              className={`flex items-center gap-2 rounded py-3 px-4 text-sm text-muted ${
+                pathname === "/projects" && "bg-light dark:bg-dark text-primary"
+              }`}
+              target="_blank"
+              onClick={handleSidebar}
+            >
+              {/* <FontAwesomeIcon icon={faProjectDiagram} /> */}
+              <span className="text-lg">INTAGRAM</span>
+            </Link>
+          </li>
+        </ul>
+        {/* <hr className="border-gray-600 my-4" /> */}
       </section>
     </div>
   );
