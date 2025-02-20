@@ -154,33 +154,35 @@ const SidebarFooter = () => {
 
 const Sidebar = ({ show, handleSidebar }) => {
   const [mounted, setMounted] = useState(false);
-  const [display, setDisplay] = useState(null);
+  const [display, setDisplay] = useState("none");
 
   useEffect(() => {
-    const body = document.querySelector("body");
+    if (show) {
+      document.body.style.overflow = "hidden";
+      document.body.style.height = "100svh";
+    } else {
+      document.body.style.overflow = "auto";
+      document.body.style.height = "auto";
+    }
 
-    if (show) body.style.overflow = "hidden";
-    else body.style.overflow = "auto";
-
-    return () => (document.body.style.overflow = "auto");
+    return () => {
+      document.body.style.overflow = "auto";
+      document.body.style.height = "auto";
+    };
   }, [show]);
 
-  useEffect(
-    function () {
-      const identifier = setTimeout(function () {
-        if (!show) setDisplay("none");
-      }, 100);
-
-      if (show) setDisplay("block");
-
-      return () => clearTimeout(identifier);
-    },
-    [show]
-  );
+  useEffect(() => {
+    if (show) {
+      setDisplay("block");
+    } else {
+      setTimeout(() => {
+        setDisplay("none");
+      }, 300);
+    }
+  }, [show]);
 
   useEffect(() => {
     setMounted(true);
-    setDisplay("none");
   }, []);
 
   if (!mounted) return null;
@@ -188,14 +190,13 @@ const Sidebar = ({ show, handleSidebar }) => {
   return createPortal(
     <div
       id="sidebar-overlay"
-      className="fixed top-0 left-0 w-screen border h-[100svh] overflow-y-scroll z-50"
+      className="fixed top-0 left-0 w-screen h-[100svh] overflow-y-scroll z-50"
       style={{ display }}
     >
       <motion.div
         initial={{ translateX: "100%" }}
-        animate={{
-          translateX: show ? "0%" : "100%",
-        }}
+        animate={{ translateX: show ? "0%" : "100%" }}
+        transition={{ duration: 0.3 }} // Ensure animation timing is smooth
         className="offcanvas h-full bg-black text-white flex flex-col"
       >
         <SidebarHeader handleSidebar={handleSidebar} />
