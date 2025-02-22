@@ -87,7 +87,7 @@ const SidebarBody = ({ handleSidebar }) => {
           </li>
           <li>
             <Link
-              href={"#hakkimizda"}
+              href={"#about"}
               className={`flex items-center gap-2 rounded py-3 px-4 text-sm text-muted ${
                 pathname === "/about" && "bg-light dark:bg-dark text-primary"
               }`}

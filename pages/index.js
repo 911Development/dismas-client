@@ -1,4 +1,5 @@
 import Container from "@/components/Container";
+import Projects from "@/components/ui/Projects";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
@@ -10,37 +11,39 @@ export default function Home() {
       <Head></Head>
       <section className="mx-auto my-12">
         <Container>
-          <section className="lg:grid lg:grid-cols-12 lg:justify-center gap-4 mb-72">
-            <section className="lg:self-end col-span-12 lg:col-span-3 mb-12 lg:mb-0">
-              <p className="text-lg text-center lg:text-start lg:w-[175px]">
-                Contact us for UI Design and Software Development projects
+          <section className="lg:grid lg:grid-cols-12 gap-4 mt-24 mb-96">
+            <section className="lg:self-end col-span-12 lg:col-span-4 mb-12 lg:mb-0">
+              <p className="text-2xl font-[200] text-center lg:text-justify whitespace-pre-line">
+                Contact us for UI{"\n"}Design and Software{"\n"}Development
+                Projects
               </p>
             </section>
-            <section className="col-span-12 lg:col-span-6 flex flex-col justify-center lg:justify-start mb-12 lg:mb-0">
+            <section className="col-span-12 lg:col-span-4 flex flex-col justify-center lg:justify-start mb-12 lg:mb-0">
               <img
                 src="/logo.png"
                 alt="Dismas"
-                className="w-72 mx-auto mb-12"
+                className="w-52 lg:w-72 mx-auto mb-12"
               />
-              <Link
-                href={"#about"}
-                className="border p-2 rounded mx-auto bg-none hover:bg-gray-900 transition-all"
-              >
-                EXPLORE DISMAS
+              <Link href={"#about"} className="mx-auto">
+                <button className="relative px-6 py-3 text-white font-semibold uppercase tracking-wide rounded-md border border-transparent bg-transparent">
+                  <span className="absolute inset-0 rounded-md border border-transparent bg-gradient-to-r from-gray-300 via-gray-600 to-gray-300"></span>
+                  <span className="absolute inset-[1px] bg-black rounded-md"></span>
+                  <span className="relative">EXPLORE DISMAS</span>
+                </button>
               </Link>
             </section>
-            <section className="col-span-12 lg:col-span-3">
-              <p className="text-center lg:text-end lg:ms-auto text-lg lg:w-[175px]">
-                DISMAS is TRNC based design and a development studio
+            <section className="col-span-12 lg:col-span-4 text-end ms-auto">
+              <p className="text-2xl font-[200] text-center lg:text-justify whitespace-pre-line">
+                DISMAS is TRNC{"\n"}based design and{"\n"}Development Studio
               </p>
             </section>
           </section>
-          <section id="about" className="mb-96">
-            <section className="border rounded-full inline-block text-start px-4 py-1 mb-8">
-              <span className="text-xl">About</span>
+          <section id="about" className="relative mb-96">
+            <section className="border rounded-full inline-block text-start px-8 py-1 mb-8">
+              <span className="font-[300] text-2xl">ABOUT</span>
             </section>
-            <section className="relative overflow-hidden">
-              <p className="lg:w-[60%] text-xl">
+            <section>
+              <p className="font-[200] lg:w-[60%] text-2xl lg:text-4xl mb-8 lg:mb-0 text-justify">
                 Dismas is more than our name, it’s a symbol of who we are and
                 what we stand for. Historically, mottos were war-cries of
                 sentiment, hope and purpose. We create mottos for our clients
@@ -49,17 +52,25 @@ export default function Home() {
               <img
                 src="/about_icon.png"
                 alt="Dismas About"
-                className="w-40 lg:w-80 absolute -bottom-24 lg:bottom-0 right-0 translate-x-1/2 translate-y-1/2"
+                className="hidden lg:block w-40 lg:w-80 absolute bottom-0 lg:bottom-0 right-0 translate-x-1/2 translate-y-1/2"
+              />
+              <img
+                src="/about_icon.png"
+                alt="Dismas About"
+                className="block lg:hidden w-40 mx-auto"
               />
             </section>
           </section>
-          <section id="projects" className="lg:grid lg:grid-cols-12 mb-48">
+          <section id="projects" className="mb-48">
+            <Projects />
+          </section>
+          {/* <section id="projects" className="lg:grid lg:grid-cols-12 mb-48">
             <section className="lg:col-span-8 mb-12 lg:mb-0">
               <section className="border rounded-full inline-block px-4 py-1 mb-8">
-                <span className="text-xl">Projects</span>
+                <span className="font-[300] text-2xl">PROJECTS</span>
               </section>
               <section>
-                <p className="text-xl text-start">
+                <p className="lg:text-3xl text-start">
                   We provide our expertise on projects of any scale, and
                   anywhere in the world.
                 </p>
@@ -99,17 +110,19 @@ export default function Home() {
                 <FontAwesomeIcon icon={faAngleRight} size="sm" />
               </Link>
             </section>
-          </section>
+          </section> */}
           <section id="contact" className="flex items-center justify-center">
-            <Link
-              href={"/"}
-              className="border rounded-full flex items-center justify-center px-4 py-1 mb-8"
-            >
-              <span className="text-xl">CONTACT</span>
-            </Link>
+            <section className="border rounded-full inline-block text-start px-8 py-1 mb-8">
+              <span className="font-[300] text-2xl">CONTACT</span>
+            </section>
           </section>
           <section className="text-center">
-            <p className="text-xl">DISMAS@STUDIO.COM</p>
+            <a
+              href="mailto:DISMAS@STUDIO.COM"
+              className="text-3xl lg:text-4xl hover:opacity-80 transition-all"
+            >
+              DISMAS@STUDIO.COM
+            </a>
           </section>
         </Container>
       </section>

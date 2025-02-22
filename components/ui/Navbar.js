@@ -37,7 +37,7 @@ const Navbar = () => {
             <li>
               <Link
                 className="text-muted hover:text-white transition-all"
-                href={"#career"}
+                href={"#projects"}
               >
                 PROJECTS
               </Link>
@@ -45,7 +45,7 @@ const Navbar = () => {
             <li>
               <Link
                 className="text-muted hover:text-white transition-all"
-                href={"#career"}
+                href={"#contact"}
               >
                 CONTACT
               </Link>
