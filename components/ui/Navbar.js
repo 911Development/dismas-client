@@ -37,6 +37,14 @@ const Navbar = () => {
             <li>
               <Link
                 className="text-muted hover:text-white transition-all"
+                href={"#services"}
+              >
+                SERVICES
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="text-muted hover:text-white transition-all"
                 href={"#projects"}
               >
                 PROJECTS
@@ -51,12 +59,14 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          <FontAwesomeIcon
-            icon={faBars}
-            size="xl"
-            className="lg:hidden ms-auto"
-            onClick={handleMenu}
-          />
+          <span className="lg:hidden ms-auto">
+            <FontAwesomeIcon
+              icon={faBars}
+              size="xl"
+              className="lg:hidden ms-auto"
+              onClick={handleMenu}
+            />
+          </span>
         </Container>
       </nav>
       <Sidebar show={isMenuOpen} handleSidebar={handleMenu} />

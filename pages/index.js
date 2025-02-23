@@ -1,9 +1,46 @@
 import Container from "@/components/Container";
 import Projects from "@/components/ui/Projects";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import Link from "next/link";
+
+const services = [
+  {
+    number: "01.",
+    title: "FRONT-END DEVELOPMENT",
+    description:
+      "We are a team specialized in enhancing the user interface and experience of your website. With our Front-End Development service, we use technologies such as HTML, CSS and JavaScript to create modern and impressive user interfaces. We aim to ensure that your site is fast loading, responsive and compatible across browsers so that your users have a seamless experience.",
+  },
+  {
+    number: "02.",
+    title: "BACK-END DEVELOPMENT",
+    description:
+      "We are here to ensure that your website has a strong infrastructure. With our Back-End Development service, we develop customized web applications to meet the specific requirements of your business. Using technologies such as database management, server-side programming languages and API integration, we ensure the efficient operation, security and scalability of your site.",
+  },
+  {
+    number: "03.",
+    title: "UI / UX DESIGN",
+    description:
+      "We ensure your website has a user-friendly and visually appealing design. With our UI/UX design service, we create an aesthetic and functional experience that resonates with your target audience. Our user-centric designs make the interaction process simple, intuitive, and enjoyable for visitors. Additionally, we provide responsive designs that work flawlessly across all devices, ensuring the best experience for both mobile and desktop users.",
+  },
+  {
+    number: "04.",
+    title: "TECHNICAL CONSULTING",
+    description:
+      "With our technical consulting service, we are here to understand the technological needs of your business and find the most viable solutions. Our team of experts provides you with strategic guidance by analyzing your business’ growth goals and operational challenges. We keep abreast of the latest technologies and trends in the industry and recommend and implement best practices.",
+  },
+  {
+    number: "05.",
+    title: "MOBILE APP DEVELOPMENT",
+    description:
+      "We offer mobile app development services to help you manage your business effortlessly on the go. Specializing in creating user-friendly and functional mobile applications, we design solutions tailored to your business or product needs. We focus on seamless user experiences and all required features your business or product needs like task management, payment processing, and notifications to ensure your mobile app simplifies operations and enhances efficiency.",
+  },
+  {
+    number: "06.",
+    title: "BRAND IDENTITY",
+    description:
+      "We ensure your brand identity stands out in a strong and impactful way. We offer a customized identity design based on your brand’s vision, values, and target audience. Through logo design, color palettes, typography, and other graphic elements, we create a consistent and memorable representation of your brand. A strong brand identity is not just about visual design, but also about effectively communicating your brand’s personality and message.",
+  },
+];
 
 export default function Home() {
   return (
@@ -61,56 +98,30 @@ export default function Home() {
               />
             </section>
           </section>
+          <section id="services" className="w-full mb-96 select-none">
+            <section className="border rounded-full inline-block text-start px-8 py-1 mb-8">
+              <span className="font-[300] text-2xl">SERVICES</span>
+            </section>
+            <section className="border rounded bg-[#2b2b2b]">
+              {services.map((service) => (
+                <section className="lg:grid lg:grid-cols-12 lg:items-center gap-4 p-10 border-b last:border-b-0">
+                  <section className="col-span-1 text-3xl">
+                    {service.number}
+                  </section>
+                  <section className="col-span-4 text-3xl mb-4 last:mb-0">
+                    {service.title}
+                  </section>
+                  <section className="col-span-7 text-justify text-muted">
+                    {service.description}
+                  </section>
+                </section>
+              ))}
+            </section>
+          </section>
           <section id="projects" className="mb-48">
+            {/* Animation will be implemented */}
             <Projects />
           </section>
-          {/* <section id="projects" className="lg:grid lg:grid-cols-12 mb-48">
-            <section className="lg:col-span-8 mb-12 lg:mb-0">
-              <section className="border rounded-full inline-block px-4 py-1 mb-8">
-                <span className="font-[300] text-2xl">PROJECTS</span>
-              </section>
-              <section>
-                <p className="lg:text-3xl text-start">
-                  We provide our expertise on projects of any scale, and
-                  anywhere in the world.
-                </p>
-              </section>
-            </section>
-            <section className="lg:col-span-4">
-              <section className="mb-12">
-                <h2 className="text-xl font-bold mb-2">ELLIE 2023</h2>
-                <p className="text-muted mb-2">
-                  As a team, we developed this mobile application to enable
-                  users to control home appliances remotely. we optimized
-                  backend connections for IoT integration.
-                </p>
-                <Link
-                  href={"https://elliesmarthome.com"}
-                  className="flex items-center justify-start gap-2"
-                  target="_blank"
-                >
-                  <span>See it Live</span>
-                  <FontAwesomeIcon icon={faAngleRight} size="sm" />
-                </Link>
-              </section>
-              <section>
-                <h2 className="text-xl font-bold mb-2">Kıbrısevim</h2>
-                <p className="text-muted mb-2">
-                  As a team, we developed this mobile application to enable
-                  users to control home appliances remotely. we optimized
-                  backend connections for IoT integration.
-                </p>
-              </section>
-              <Link
-                href={"https://kibrisevim.com/"}
-                className="flex items-center justify-start gap-2"
-                target="_blank"
-              >
-                <span>See it Live</span>
-                <FontAwesomeIcon icon={faAngleRight} size="sm" />
-              </Link>
-            </section>
-          </section> */}
           <section id="contact" className="flex items-center justify-center">
             <section className="border rounded-full inline-block text-start px-8 py-1 mb-8">
               <span className="font-[300] text-2xl">CONTACT</span>
