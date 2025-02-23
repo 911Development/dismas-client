@@ -18,27 +18,20 @@ const Navbar = () => {
               DISMAS STUDIO
             </h1>
           </Link>
-          <ul className="lg:flex items-center hidden gap-3">
+          <ul className="hidden md:flex space-x-12">
             <li className="relative">
               <Link
-                className="text-muted hover:text-white transition-all"
+                className="text-white text-medium tracking-menuSpacing font-slim hover:text-muted transition-all"
                 href={"#about"}
               >
                 ABOUT
               </Link>
               <div className="absolute"></div>
             </li>
+
             <li>
               <Link
-                className="text-muted hover:text-white transition-all"
-                href={"#career"}
-              >
-                CAREER
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="text-muted hover:text-white transition-all"
+                className="text-white text-medium tracking-menuSpacing font-slim hover:text-muted transition-all"
                 href={"#services"}
               >
                 SERVICES
@@ -46,7 +39,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                className="text-muted hover:text-white transition-all"
+                className="text-white text-medium tracking-menuSpacing font-slim hover:text-muted transition-all"
                 href={"#projects"}
               >
                 PROJECTS
@@ -54,7 +47,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                className="text-muted hover:text-white transition-all"
+                className="text-white text-medium tracking-menuSpacing font-slim hover:text-muted transition-all"
                 href={"#contact"}
               >
                 CONTACT
