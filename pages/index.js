@@ -63,9 +63,9 @@ export default function Home() {
                 className="w-52 lg:w-72 mx-auto mb-12"
               />
               <Link href={"#about"} className="mx-auto">
-                <button className="relative px-6 py-3 text-white font-semibold uppercase tracking-wide rounded-md border border-transparent bg-transparent">
-                  <span className="absolute inset-0 rounded-md border border-transparent bg-gradient-to-r from-gray-300 via-gray-600 to-gray-300"></span>
-                  <span className="absolute inset-[1px] bg-black rounded-md"></span>
+                <button className="relative px-6 py-3 text-white font-semibold uppercase tracking-wide border border-transparent bg-transparent">
+                  <span className="absolute inset-0  border border-transparent bg-gradient-to-r from-gray-300 via-gray-600 to-gray-300"></span>
+                  <span className="absolute inset-[1px] bg-black "></span>
                   <span className="relative">EXPLORE DISMAS</span>
                 </button>
               </Link>

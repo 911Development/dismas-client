@@ -97,18 +97,7 @@ const SidebarBody = ({ handleSidebar }) => {
               <span className="text-lg">ABOUT</span>
             </Link>
           </li>
-          <li>
-            <Link
-              href={"#career"}
-              className={`flex items-center gap-2 rounded py-3 px-4 text-sm text-muted ${
-                pathname === "/teams" && "bg-light dark:bg-dark text-primary"
-              }`}
-              onClick={handleSidebar}
-            >
-              {/* <FontAwesomeIcon icon={faUsers} /> */}
-              <span className="text-lg">CAREER</span>
-            </Link>
-          </li>
+
           <li>
             <Link
               href={"#services"}

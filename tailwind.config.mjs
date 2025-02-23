@@ -39,6 +39,42 @@ export default {
       transitionDelay: {
         DEFAULT: "0.15s",
       },
+      letterSpacing: {
+        headerSpacing: "14px",
+        menuSpacing: "4px",
+      },
+      lineHeight: {
+        heroLine: "1em",
+        heroLineAlt: "1.27em",
+        heroLineUI: "1.5em",
+      },
+
+      fontWeight: {
+        slim: "200",
+        regular: "400",
+        medium: "500",
+        semiBold: "600",
+        bold: "700",
+      },
+
+      fontSize: {
+        small: "1rem",
+        medium: "1.4rem",
+        large: "2rem",
+        xlarge: "2.5rem",
+        xxlarge: "15rem",
+        xxlargealt: "13rem",
+        xxxlarge: "30rem",
+
+        xxxlargealt: "25rem",
+      },
+
+      colors: {
+        primary: "#000000",
+        secondary: "#ffffff",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+      },
     },
   },
   plugins: [],
