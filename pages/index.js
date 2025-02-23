@@ -2,6 +2,7 @@ import Container from "@/components/Container";
 import Projects from "@/components/ui/Projects";
 import Head from "next/head";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -48,7 +49,7 @@ export default function Home() {
       <Head></Head>
       <section className="mx-auto my-12">
         <Container>
-          <section className="lg:grid lg:grid-cols-12 gap-4 mt-24 mb-96">
+          <section className="lg:grid lg:grid-cols-12 gap-4 mt-24">
             <section className="lg:self-end col-span-12 lg:col-span-4 mb-12 lg:mb-0">
               <p className="text-2xl font-[200] text-center lg:text-justify whitespace-pre-line">
                 Contact us for UI{"\n"}Design and Software{"\n"}Development
@@ -75,6 +76,49 @@ export default function Home() {
               </p>
             </section>
           </section>
+        </Container>
+        <section className="hidden my-40 lg:flex items-center justify-center overflow-hidden whitespace-nowrap">
+          <motion.div
+            className="flex items-center space-x-[50vw] sm:space-x-10 text-7xl font-[300]"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+          >
+            <span>CREATIVE & DEVELOPMENT</span>
+            <img src="/Vector.png" width={96} height={96} alt="icon" />
+            <span>CREATIVE & DEVELOPMENT</span>
+
+            <span>CREATIVE & DEVELOPMENT</span>
+            <img src="/Vector.png" width={96} height={96} alt="icon" />
+            <span>CREATIVE & DEVELOPMENT</span>
+          </motion.div>
+        </section>
+        <section className="flex my-40 lg:hidden items-center justify-center overflow-hidden whitespace-nowrap">
+          <motion.div
+            className="flex items-center space-x-[20vw] sm:space-x-10 text-4xl sm:text-7xl font-[300]"
+            animate={{ x: ["0%", "-100%"] }}
+            transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+          >
+            <span className="me-16">CREATIVE & DEVELOPMENT</span>
+            <img
+              src="/Vector.png"
+              width={64}
+              height={64}
+              alt="icon"
+              className="mx-auto"
+            />
+            <span>CREATIVE & DEVELOPMENT</span>
+            <span>CREATIVE & DEVELOPMENT</span>
+            <img
+              src="/Vector.png"
+              width={64}
+              height={64}
+              alt="icon"
+              className="mx-auto"
+            />
+            <span>CREATIVE & DEVELOPMENT</span>
+          </motion.div>
+        </section>
+        <Container>
           <section id="about" className="relative mb-96">
             <section className="border rounded-full inline-block text-start px-8 py-1 mb-8">
               <span className="font-[300] text-2xl">ABOUT</span>
