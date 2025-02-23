@@ -22,7 +22,7 @@ const SplashScreen = () => {
           className="fixed top-0 left-0 w-screen h-[100svh] flex items-center justify-center bg-black z-50"
         >
           <div className="relative flex overflow-hidden">
-            <h1 className="absolute text-5xl tracking-widest font-bold text-transparent stroke-text whitespace-nowrap">
+            <h1 className="absolute text-5xl trajan tracking-widest font-bold text-transparent stroke-text whitespace-nowrap">
               DISMAS STUDIO
             </h1>
 
@@ -30,7 +30,7 @@ const SplashScreen = () => {
               initial={{ width: 0 }}
               animate={{ width: "100%" }}
               transition={{ duration: 2, ease: "easeInOut" }}
-              className="text-5xl tracking-widest font-bold text-white overflow-hidden whitespace-nowrap"
+              className="text-5xl trajan tracking-widest font-bold text-white overflow-hidden whitespace-nowrap"
             >
               DISMAS STUDIO
             </motion.h1>
