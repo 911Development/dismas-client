@@ -4,6 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Trajan Pro";
+  src: url("/fonts/TrajanPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --color-muted: 255, 255, 255, 0.6;
   --color-border: 255, 255, 255, 0.3;
@@ -26,4 +33,13 @@ body {
   font-family: "Josefin Sans", serif;
   background-color: #000;
   color: #fff;
+}
+
+.stroke-text {
+  -webkit-text-stroke: 0.75px white;
+  white-space: nowrap;
+}
+
+.trajan {
+  font-family: "Trajan Pro", serif;
 }

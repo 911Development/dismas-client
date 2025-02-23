@@ -14,11 +14,9 @@ const Navbar = () => {
       <nav className="py-6 sticky top-0 bg-black z-50">
         <Container className={"flex !flex-row items-center justify-between"}>
           <Link href={"/"}>
-            <div className="text-large font-regular  text-white">
-              <h1 href="#" aria-label="Homepage">
-                DISMAS STUDIO
-              </h1>
-            </div>
+            <h1 className="text-2xl font-bold trajan tracking-widest">
+              DISMAS STUDIO
+            </h1>
           </Link>
           <ul className="hidden md:flex space-x-12">
             <li className="relative">

@@ -63,9 +63,10 @@ export default function Home() {
                 className="w-52 lg:w-72 mx-auto mb-12"
               />
               <Link href={"#about"} className="mx-auto">
-                <button className="relative px-6 py-3 text-white font-semibold uppercase tracking-wide border border-transparent bg-transparent">
-                  <span className="absolute inset-0  border border-transparent bg-gradient-to-r from-gray-300 via-gray-600 to-gray-300"></span>
-                  <span className="absolute inset-[1px] bg-black "></span>
+
+                <button className="relative px-6 py-3 text-white font-semibold uppercase tracking-wide rounded-md border border-transparent bg-transparent">
+                  <span className="absolute inset-0 border border-transparent bg-gradient-to-r from-gray-300 via-gray-600 to-gray-300"></span>
+                  <span className="absolute inset-[1px] bg-black"></span>
                   <span className="relative">EXPLORE DISMAS</span>
                 </button>
               </Link>
@@ -152,7 +153,7 @@ export default function Home() {
                   <section className="col-span-1 text-3xl">
                     {service.number}
                   </section>
-                  <section className="col-span-4 text-3xl mb-4 last:mb-0">
+                  <section className="col-span-4 text-3xl mb-4 last:mb-0 lg:mb-0">
                     {service.title}
                   </section>
                   <section className="col-span-7 text-justify text-muted">
@@ -163,7 +164,6 @@ export default function Home() {
             </section>
           </section>
           <section id="projects" className="mb-48">
-            {/* Animation will be implemented */}
             <Projects />
           </section>
           <section id="contact" className="flex items-center justify-center">
