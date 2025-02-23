@@ -1,11 +1,13 @@
 import Link from "next/link";
 import Navbar from "./ui/Navbar";
 import Container from "./Container";
+import SplashScreen from "@/pages/SplashScreen";
 
 const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
+      <SplashScreen />
       <main className="">{children}</main>
       <footer className="py-12">
         <Container className="flex !flex-row items-center justify-between px-0">

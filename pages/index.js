@@ -163,7 +163,6 @@ export default function Home() {
             </section>
           </section>
           <section id="projects" className="mb-48">
-            {/* Animation will be implemented */}
             <Projects />
           </section>
           <section id="contact" className="flex items-center justify-center">
