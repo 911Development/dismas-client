@@ -118,30 +118,32 @@ export default function Home() {
             <span>CREATIVE & DEVELOPMENT</span>
           </motion.div>
         </section>
-        <Container>
-          <section id="about" className="mb-96">
-            <section className="border rounded-full inline-block text-start px-8 py-1 mb-8">
-              <span className="font-[300] text-2xl">ABOUT</span>
+        <section id="about" className="relative mb-96">
+          <Container>
+            <section className="border rounded-full me-auto px-8 py-1 mb-8">
+              <span className="font-[300] text-2xl text-start">ABOUT</span>
             </section>
-            <section className="relative">
+            <section className="">
               <p className="font-[200] lg:w-[60%] text-3xl lg:text-6xl mb-8 lg:mb-0 text-justify">
                 Dismas is more than our name, it’s a symbol of who we are and
                 what we stand for. Historically, mottos were war-cries of
                 sentiment, hope and purpose. We create mottos for our clients
                 that serve as a rallying car.
               </p>
-              <img
-                src="/about_icon.png"
-                alt="Dismas About"
-                className="hidden lg:block lg:w-1/3 absolute bottom-0 right-12 translate-x-1/2 translate-y-1/2"
-              />
-              <img
-                src="/about_icon.png"
-                alt="Dismas About"
-                className="block lg:hidden w-[80%] mx-auto"
-              />
             </section>
-          </section>
+          </Container>
+          <img
+            src="/about_icon.png"
+            alt="Dismas About"
+            className="hidden lg:block w-[60%] absolute bottom-0 right-20 translate-x-1/2 translate-y-1/2"
+          />
+          <img
+            src="/about_icon.png"
+            alt="Dismas About"
+            className="block lg:hidden w-[80%] mx-auto"
+          />
+        </section>
+        <Container>
           <section id="services" className="w-full mb-96 select-none">
             <section className="border rounded-full inline-block text-start px-8 py-1 mb-8">
               <span className="font-[300] text-2xl">SERVICES</span>
