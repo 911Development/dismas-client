@@ -14,7 +14,7 @@ const Navbar = () => {
       <nav className="py-6 sticky top-0 bg-black z-50">
         <Container className={"flex !flex-row items-center justify-between"}>
           <Link href={"/"}>
-            <h1 className="text-2xl font-bold trajan tracking-widest">
+            <h1 className="text-4xl font-bold trajan tracking-widest">
               DISMAS STUDIO
             </h1>
           </Link>
@@ -26,7 +26,6 @@ const Navbar = () => {
               >
                 ABOUT
               </Link>
-              <div className="absolute"></div>
             </li>
 
             <li>
