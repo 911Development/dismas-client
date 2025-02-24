@@ -31,6 +31,46 @@ const projects = [
       "As a team, we developed this mobile application to enable users to control home appliances remotely, we optimized backend connections for IoT integration.",
     liveLink: "http://kibrisevim.com/",
   },
+  {
+    name: "KibTaxi",
+    year: 2024,
+    techStack: [
+      "JavaScript",
+      "Flutter",
+      "Node.js",
+      "Figma",
+      "Express",
+      "MongoDB",
+      "Google Cloud",
+      "AWS Web Services",
+    ],
+    description:
+      "Find Kıbrıs Taksi & TRNC taksi with their reviews, photos, and contact options.",
+    liveLink:
+      "https://play.google.com/store/apps/details?id=com.kibtaxi.kibtaxi",
+  },
+  {
+    name: "DigitBuzz",
+    year: 2025,
+    techStack: [
+      "JavaScript",
+      "React",
+      "Next.js",
+      "Express",
+      "MongoDB",
+      "Figma",
+    ],
+    description: "DigitBuzz - Online Marketing",
+    liveLink: "https://www.digitbuzz.com/en",
+  },
+  {
+    name: "Yıldız Taş",
+    year: 2025,
+    techStack: ["JavaScript", "React", "Next.js", "Vite", "Figma"],
+    description:
+      "Turning Your Dreams Into Reality. We achieve success together.",
+    liveLink: "https://www.yildiztasconstructions.com/",
+  },
 ];
 
 const Projects = () => {
