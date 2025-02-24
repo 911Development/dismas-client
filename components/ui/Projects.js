@@ -75,10 +75,10 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="lg:grid lg:grid-cols-12 gap-4 rounded border bg-[#2b2b2b] p-10">
+    <section className="lg:grid lg:grid-cols-12 gap-4 rounded border bg-[#0f0f0f] p-10">
       <section className="lg:col-span-5">
         <section className="border rounded-full inline-block text-start px-8 py-1 mb-8">
-          <span className="font-[300] text-2xl">PROJECTS</span>
+          <span className="font-[300] text-2xl lg:text-4xl">PROJECTS</span>
         </section>
         <p className="text-3xl">
           We provide our expertise on projects of any scale, and anywhere in the

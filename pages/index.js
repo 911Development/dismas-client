@@ -49,7 +49,7 @@ export default function Home() {
       <Head></Head>
       <section className="my-12">
         <Container>
-          <section className="lg:grid lg:grid-cols-12 gap-4 mt-24 w-full">
+          <section className="lg:grid lg:grid-cols-12 gap-4 mt-16 w-full">
             <section className="lg:self-end col-span-12 lg:col-span-4 mb-12 lg:mb-0">
               <p className="text-3xl font-[200] text-center lg:text-justify whitespace-pre-line">
                 Contact us for UI{"\n"}Design and Software{"\n"}Development
@@ -118,10 +118,12 @@ export default function Home() {
             <span>CREATIVE & DEVELOPMENT</span>
           </motion.div>
         </section>
-        <section id="about" className="relative mb-96">
+        <section id="about" className="relative my-96">
           <Container>
             <section className="border rounded-full me-auto px-8 py-1 mb-8">
-              <span className="font-[300] text-2xl text-start">ABOUT</span>
+              <span className="font-[300] text-2xl lg:text-4xl text-start">
+                ABOUT
+              </span>
             </section>
             <section className="">
               <p className="font-[200] lg:w-[60%] text-3xl lg:text-6xl mb-8 lg:mb-0 text-justify">
@@ -135,7 +137,7 @@ export default function Home() {
           <img
             src="/about_icon.png"
             alt="Dismas About"
-            className="hidden lg:block w-[60%] absolute bottom-0 right-20 translate-x-1/2 translate-y-1/2"
+            className="hidden lg:block w-[60%] absolute -bottom-20 right-0 translate-x-1/4 translate-y-1/2"
           />
           <img
             src="/about_icon.png"
@@ -146,9 +148,9 @@ export default function Home() {
         <Container>
           <section id="services" className="w-full mb-96 select-none">
             <section className="border rounded-full inline-block text-start px-8 py-1 mb-8">
-              <span className="font-[300] text-2xl">SERVICES</span>
+              <span className="font-[300] text-2xl lg:text-4xl">SERVICES</span>
             </section>
-            <section className="border rounded bg-[#2b2b2b]">
+            <section className="border rounded bg-[#0f0f0f]">
               {services.map((service) => (
                 <section className="lg:grid lg:grid-cols-12 lg:items-center gap-4 p-10 border-b last:border-b-0">
                   <section className="col-span-1 text-3xl">
@@ -167,9 +169,12 @@ export default function Home() {
           <section id="projects" className="mb-48">
             <Projects />
           </section>
-          <section id="contact" className="flex items-center justify-center">
-            <section className="border rounded-full inline-block text-start px-8 py-1 mb-8">
-              <span className="font-[300] text-2xl">CONTACT</span>
+          <section
+            id="contact"
+            className="flex items-center justify-center mb-24"
+          >
+            <section className="border rounded-full inline-block text-start px-8 py-1">
+              <span className="font-[300] text-2xl lg:text-4xl">CONTACT</span>
             </section>
           </section>
           <section className="text-center">
