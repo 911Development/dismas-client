@@ -18,7 +18,7 @@ const Navbar = () => {
               DISMAS STUDIO
             </h1>
           </Link>
-          <ul className="hidden md:flex space-x-12">
+          <ul className="hidden lg:flex space-x-12">
             <li className="relative">
               <Link
                 className="text-white text-medium tracking-menuSpacing font-slim hover:text-muted transition-all"
