@@ -7,7 +7,7 @@ const SplashScreen = () => {
   useEffect(() => {
     const identifier = setTimeout(() => {
       setIsVisible(false);
-    }, 2700);
+    }, 2150);
 
     return () => clearTimeout(identifier);
   }, []);
@@ -25,10 +25,14 @@ const SplashScreen = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.section
-          initial={{ opacity: 1 }}
+          initial={{ opacity: 1, y: 0 }}
           exit={{ y: "-125%" }}
-          transition={{ duration: 1 }}
-          className="fixed top-0 left-0 w-screen h-screen flex items-end -translate-y-6 justify-center bg-black z-50"
+          transition={{ duration: 0.75 }}
+          className="fixed inset-0 flex items-end justify-center bg-black z-50 pb-12 lg:pb-0"
+          style={{
+            width: "100%",
+            height: "100svh",
+          }}
         >
           <div className="relative flex overflow-hidden">
             <h1 className="absolute w-[15vw] leading-none text-4xl lg:text-8xl tracking-widest font-bold text-transparent stroke-text whitespace-nowrap">
