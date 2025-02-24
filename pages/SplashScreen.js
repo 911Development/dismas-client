@@ -12,6 +12,15 @@ const SplashScreen = () => {
     return () => clearTimeout(identifier);
   }, []);
 
+  useEffect(() => {
+    const body = document.querySelector("body");
+
+    if (isVisible) body.style.overflow = "hidden";
+    else body.style.overflow = "auto";
+
+    return () => (document.body.style.overflow = "auto");
+  }, [isVisible]);
+
   return (
     <AnimatePresence>
       {isVisible && (
