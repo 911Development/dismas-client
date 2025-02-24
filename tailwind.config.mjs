@@ -65,7 +65,6 @@ export default {
         xxlarge: "15rem",
         xxlargealt: "13rem",
         xxxlarge: "30rem",
-
         xxxlargealt: "25rem",
       },
 
