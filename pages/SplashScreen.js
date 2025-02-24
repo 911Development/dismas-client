@@ -28,7 +28,7 @@ const SplashScreen = () => {
           initial={{ opacity: 1 }}
           exit={{ y: "-125%" }}
           transition={{ duration: 1 }}
-          className="fixed top-0 left-0 w-screen h-[100svh] flex items-end -translate-y-6 justify-center bg-black z-50"
+          className="fixed top-0 left-0 w-screen h-screen flex items-end -translate-y-6 justify-center bg-black z-50"
         >
           <div className="relative flex overflow-hidden">
             <h1 className="absolute w-[15vw] leading-none text-4xl lg:text-8xl tracking-widest font-bold text-transparent stroke-text whitespace-nowrap">
