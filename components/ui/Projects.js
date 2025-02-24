@@ -75,7 +75,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="lg:grid lg:grid-cols-12 gap-4">
+    <section className="lg:grid lg:grid-cols-12 gap-4 rounded border bg-[#2b2b2b] p-10">
       <section className="lg:col-span-5">
         <section className="border rounded-full inline-block text-start px-8 py-1 mb-8">
           <span className="font-[300] text-2xl">PROJECTS</span>
@@ -87,14 +87,19 @@ const Projects = () => {
       </section>
       <section className="lg:col-span-7 mt-10 lg:mt-0">
         {projects.map((project, index) => (
-          <div key={index} className="mt-10 border-t border-gray-700 pt-6">
+          <div
+            key={index}
+            className="mt-10 border-b pb-6 border-gray-500 last:border-b-0 pt-6"
+          >
             <div className="flex justify-between items-center">
               <h3 className="text-2xl font-semibold">{project.name}</h3>
               <a href={project.liveLink} target="_blank" className="text-2xl">
                 ↗
               </a>
             </div>
+            <hr className="border border-gray-500 h-[0.5px] w-full my-3" />
             <p className="text-gray-400 mt-2">{project.year}</p>
+            <hr className="border border-gray-500 h-[0.5px] w-full my-3" />
             <div className="flex flex-wrap mt-2 gap-2">
               {project.techStack.map((tech, idx) => (
                 <span
@@ -105,7 +110,9 @@ const Projects = () => {
                 </span>
               ))}
             </div>
+            <hr className="border border-gray-500 h-[0.5px] w-full my-3" />
             <p className="mt-4 text-gray-300">{project.description}</p>
+            <hr className="border border-gray-500 h-[0.5px] w-full my-3" />
             <a
               href={project.liveLink}
               className="text-gray-400 mt-4 inline-block hover:underline"
