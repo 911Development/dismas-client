@@ -180,7 +180,7 @@ export default function Home() {
           <section className="text-center">
             <a
               href="mailto:DISMAS@STUDIO.COM"
-              className="text-3xl lg:text-6xl font-bold hover:opacity-80 transition-all"
+              className="text-3xl lg:text-6xl font-[300] hover:opacity-80 transition-all"
             >
               DISMAS@STUDIO.COM
             </a>
