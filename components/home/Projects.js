@@ -92,17 +92,28 @@ const Projects = () => {
     <motion.section
       ref={ref}
       style={{ width }}
-      className="relative w-full lg:w-[85%] mx-auto lg:flex gap-4 rounded border bg-[#0f0f0f] p-10"
+      className="relative w-full lg:w-[85%] mx-auto lg:flex gap-3 lg:gap-0 rounded border bg-[#0f0f0f] p-10"
     >
-      <section className="lg:w-1/3 flex">
-        <div className="sticky top-32 self-start">
-          <section className="border rounded-full inline-block text-start px-8 py-1 mb-8">
+      <section className="lg:w-1/3 flex mb-12 lg:mb-0">
+        <div className="lg:sticky lg:top-32 lg:self-start">
+          <section className="hidden lg:inline-block border rounded-full text-start px-8 py-1 mb-8">
             <span className="font-[300] text-2xl lg:text-4xl">PROJECTS</span>
           </section>
-          <p className="text-2xl lg:text-3xl lg:w-[380px] text-justify mb-12 lg:mb-0">
+          <section className="lg:hidden flex items-center justify-center">
+            <span className="border px-8 py-1 mb-8 rounded-full font-[300] text-2xl lg:text-4xl">
+              PROJECTS
+            </span>
+          </section>
+          <p className="hidden lg:block text-3xl w-[340px] text-justify lg:mb-0">
             We provide our expertise on projects of any scale, and anywhere in
             the world.
           </p>
+          <section className="lg:hidden">
+            <p className="text-2xl w-[92%] mx-auto text-center">
+              We provide our expertise on projects of any scale, and anywhere in
+              the world.
+            </p>
+          </section>
         </div>
       </section>
 
