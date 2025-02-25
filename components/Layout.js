@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     <>
       <Navbar />
       <SplashScreen />
-      <main className="">{children}</main>
+      <main className="select-none">{children}</main>
       <footer className="py-12">
         <Container className="flex !flex-row items-center justify-between px-0">
           <p className="hidden lg:block text-xl">2025 based in Cyprus</p>

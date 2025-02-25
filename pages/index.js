@@ -1,48 +1,12 @@
 import Container from "@/components/Container";
-import Projects from "@/components/ui/Projects";
+import Projects from "@/components/home/Projects";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-
-const services = [
-  {
-    number: "01.",
-    title: "FRONT-END DEVELOPMENT",
-    description:
-      "We are a team specialized in enhancing the user interface and experience of your website. With our Front-End Development service, we use technologies such as HTML, CSS and JavaScript to create modern and impressive user interfaces. We aim to ensure that your site is fast loading, responsive and compatible across browsers so that your users have a seamless experience.",
-  },
-  {
-    number: "02.",
-    title: "BACK-END DEVELOPMENT",
-    description:
-      "We are here to ensure that your website has a strong infrastructure. With our Back-End Development service, we develop customized web applications to meet the specific requirements of your business. Using technologies such as database management, server-side programming languages and API integration, we ensure the efficient operation, security and scalability of your site.",
-  },
-  {
-    number: "03.",
-    title: "UI / UX DESIGN",
-    description:
-      "We ensure your website has a user-friendly and visually appealing design. With our UI/UX design service, we create an aesthetic and functional experience that resonates with your target audience. Our user-centric designs make the interaction process simple, intuitive, and enjoyable for visitors. Additionally, we provide responsive designs that work flawlessly across all devices, ensuring the best experience for both mobile and desktop users.",
-  },
-  {
-    number: "04.",
-    title: "TECHNICAL CONSULTING",
-    description:
-      "With our technical consulting service, we are here to understand the technological needs of your business and find the most viable solutions. Our team of experts provides you with strategic guidance by analyzing your business’ growth goals and operational challenges. We keep abreast of the latest technologies and trends in the industry and recommend and implement best practices.",
-  },
-  {
-    number: "05.",
-    title: "MOBILE APP DEVELOPMENT",
-    description:
-      "We offer mobile app development services to help you manage your business effortlessly on the go. Specializing in creating user-friendly and functional mobile applications, we design solutions tailored to your business or product needs. We focus on seamless user experiences and all required features your business or product needs like task management, payment processing, and notifications to ensure your mobile app simplifies operations and enhances efficiency.",
-  },
-  {
-    number: "06.",
-    title: "BRAND IDENTITY",
-    description:
-      "We ensure your brand identity stands out in a strong and impactful way. We offer a customized identity design based on your brand’s vision, values, and target audience. Through logo design, color palettes, typography, and other graphic elements, we create a consistent and memorable representation of your brand. A strong brand identity is not just about visual design, but also about effectively communicating your brand’s personality and message.",
-  },
-];
+import { FlipWords } from "@/components/ui/flip-words";
+import Contact from "@/components/home/Contact";
+import Services from "@/components/home/Services";
 
 const main_words_1 = `
 Contact us for UI
@@ -54,6 +18,10 @@ DISMAS is TRNC
 based design and
 Development Studio
 `;
+
+const flip_words = [
+  "Dismas is more than our name, it’s a symbol of who we are and what we stand for. Historically, mottos were war-cries of sentiment, hope and purpose. We create mottos for our clients that serve as a rallying car.",
+];
 
 // ! Minimum Delay: 2150 milliseconds
 
@@ -155,66 +123,42 @@ export default function Home() {
                 ABOUT
               </span>
             </section>
-            <section className="">
-              <p className="font-[200] lg:w-[60%] text-3xl lg:text-6xl mb-8 lg:mb-0 text-justify">
+            <section>
+              {/* <p className="font-[200] lg:w-[60%] text-3xl lg:text-6xl mb-8 lg:mb-0 text-justify">
                 Dismas is more than our name, it’s a symbol of who we are and
                 what we stand for. Historically, mottos were war-cries of
                 sentiment, hope and purpose. We create mottos for our clients
                 that serve as a rallying car.
-              </p>
+              </p> */}
+              <FlipWords words={flip_words} />
             </section>
           </Container>
-          <img
+          <motion.img
             src="/about_icon.png"
             alt="Dismas About"
             className="hidden lg:block w-[60%] absolute -bottom-20 right-0 translate-x-1/4 translate-y-1/2"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: [0, 1] }}
+            transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
+            viewport={{ once: true }}
           />
-          <img
+
+          <motion.img
             src="/about_icon.png"
             alt="Dismas About"
             className="block lg:hidden w-[80%] mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: [0, 1] }}
+            transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
+            viewport={{ once: true }}
           />
         </section>
+        <Services />
+        <section id="projects" className="mb-48">
+          <Projects />
+        </section>
         <Container>
-          <section id="services" className="w-full mb-96 select-none">
-            <section className="border rounded-full inline-block text-start px-8 py-1 mb-8">
-              <span className="font-[300] text-2xl lg:text-4xl">SERVICES</span>
-            </section>
-            <section className="border rounded bg-[#0f0f0f]">
-              {services.map((service) => (
-                <section className="lg:grid lg:grid-cols-12 lg:items-center gap-4 p-10 border-b last:border-b-0">
-                  <section className="col-span-1 text-3xl">
-                    {service.number}
-                  </section>
-                  <section className="col-span-4 text-3xl mb-4 last:mb-0 lg:mb-0">
-                    {service.title}
-                  </section>
-                  <section className="col-span-7 text-justify text-muted">
-                    {service.description}
-                  </section>
-                </section>
-              ))}
-            </section>
-          </section>
-          <section id="projects" className="mb-48">
-            <Projects />
-          </section>
-          <section
-            id="contact"
-            className="flex items-center justify-center mb-24"
-          >
-            <section className="border rounded-full inline-block text-start px-8 py-1">
-              <span className="font-[300] text-2xl lg:text-4xl">CONTACT</span>
-            </section>
-          </section>
-          <section className="text-center">
-            <a
-              href="mailto:DISMAS@STUDIO.COM"
-              className="text-3xl lg:text-6xl font-[300] hover:opacity-80 transition-all"
-            >
-              DISMAS@STUDIO.COM
-            </a>
-          </section>
+          <Contact />
         </Container>
       </section>
     </>

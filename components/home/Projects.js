@@ -1,4 +1,5 @@
-import React from "react";
+import { useScroll, motion, useTransform } from "framer-motion";
+import React, { useRef } from "react";
 
 const projects = [
   {
@@ -74,22 +75,42 @@ const projects = [
 ];
 
 const Projects = () => {
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  const width = useTransform(
+    scrollYProgress,
+    [0, 0.5, 1],
+    ["85%", "100%", "85%"]
+  );
+
   return (
-    <section className="lg:grid lg:grid-cols-12 gap-4 rounded border bg-[#0f0f0f] p-10">
-      <section className="lg:col-span-5">
-        <section className="border rounded-full inline-block text-start px-8 py-1 mb-8">
-          <span className="font-[300] text-2xl lg:text-4xl">PROJECTS</span>
-        </section>
-        <p className="text-3xl">
-          We provide our expertise on projects of any scale, and anywhere in the
-          world.
-        </p>
+    <motion.section
+      ref={ref}
+      style={{ width }}
+      className="relative w-full lg:w-[85%] mx-auto lg:flex gap-4 rounded border bg-[#0f0f0f] p-10"
+    >
+      <section className="lg:w-1/3 flex">
+        <div className="sticky top-32 self-start">
+          <section className="border rounded-full inline-block text-start px-8 py-1 mb-8">
+            <span className="font-[300] text-2xl lg:text-4xl">PROJECTS</span>
+          </section>
+          <p className="text-2xl lg:text-3xl lg:w-[380px] text-justify mb-12 lg:mb-0">
+            We provide our expertise on projects of any scale, and anywhere in
+            the world.
+          </p>
+        </div>
       </section>
-      <section className="lg:col-span-7 mt-10 lg:mt-0">
+
+      <section className="lg:w-2/3 space-y-20">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="mt-10 border-b pb-6 border-gray-500 last:border-b-0 pt-6"
+            className="border-b pb-6 border-gray-500 last:border-b-0 pt-6"
           >
             <div className="flex justify-between items-center">
               <h3 className="text-2xl font-semibold">{project.name}</h3>
@@ -123,7 +144,7 @@ const Projects = () => {
           </div>
         ))}
       </section>
-    </section>
+    </motion.section>
   );
 };
 
