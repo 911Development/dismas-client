@@ -3,6 +3,7 @@ import Projects from "@/components/ui/Projects";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 const services = [
   {
@@ -43,6 +44,17 @@ const services = [
   },
 ];
 
+const main_words_1 = `
+Contact us for UI
+Design and Software
+Development Projects`;
+
+const main_words_2 = `
+DISMAS is TRNC
+based design and
+Development Studio
+`;
+
 // ! Minimum Delay: 2150 milliseconds
 
 export default function Home() {
@@ -53,10 +65,11 @@ export default function Home() {
         <Container>
           <section className="lg:grid lg:grid-cols-12 gap-4 mt-16 w-full">
             <section className="lg:self-end col-span-12 lg:col-span-4 mb-12 lg:mb-0">
-              <p className="text-3xl font-[200] text-center lg:text-justify whitespace-pre-line">
+              {/* <p className="text-3xl font-[200] text-center lg:text-justify whitespace-pre-line">
                 Contact us for UI{"\n"}Design and Software{"\n"}Development
                 Projects
-              </p>
+              </p> */}
+              <TextGenerateEffect words={main_words_1} />
             </section>
             <section className="col-span-12 lg:col-span-4 flex flex-col justify-center lg:justify-start mb-12 lg:mb-0">
               <motion.img
@@ -68,18 +81,29 @@ export default function Home() {
                 exit={{ scale: 1 }}
                 transition={{ delay: 2.5, ease: "easeOut", type: "tween" }}
               />
-              <Link href={"#about"} className="mx-auto">
-                <button className="relative px-6 py-3 text-white font-semibold uppercase tracking-wide rounded-md border border-transparent bg-transparent">
-                  <span className="absolute inset-0 border border-transparent bg-gradient-to-r from-gray-300 via-gray-600 to-gray-300"></span>
-                  <span className="absolute inset-[1px] bg-black"></span>
-                  <span className="relative">EXPLORE DISMAS</span>
-                </button>
-              </Link>
+              <motion.section
+                initial={{ y: 10, opacity: 0 }}
+                animate={{ y: [10, 0], opacity: [0, 1] }}
+                exit={{ y: 0, opacity: 1 }}
+                transition={{ ease: "easeOut", duration: 0.75, delay: 4.5 }}
+                className="flex items-center justify-center py-4"
+              >
+                <Link href={"#about"} className="group mx-auto">
+                  <button className="relative px-6 py-3 text-white font-semibold uppercase tracking-[5px] rounded-md border border-transparent bg-transparent">
+                    <span className="absolute inset-0 border border-transparent bg-gradient-to-r from-gray-400 via-gray-600 to-gray-400"></span>
+                    <span className="absolute inset-[1px] bg-black"></span>
+                    <span className="relative font-[200] group-hover:font-[400] transition-all">
+                      EXPLORE DISMAS
+                    </span>
+                  </button>
+                </Link>
+              </motion.section>
             </section>
             <section className="col-span-12 lg:col-span-4 text-end ms-auto">
-              <p className="text-3xl font-[200] text-center lg:text-justify whitespace-pre-line">
+              {/* <p className="text-3xl font-[200] text-center lg:text-justify whitespace-pre-line">
                 DISMAS is TRNC{"\n"}based design and{"\n"}Development Studio
-              </p>
+              </p> */}
+              <TextGenerateEffect words={main_words_2} />
             </section>
           </section>
         </Container>
