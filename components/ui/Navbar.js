@@ -4,6 +4,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import Sidebar from "./Sidebar";
+import { motion } from "framer-motion";
+
+const LINKS = [
+  {
+    text: "ABOUT",
+    href: "#about",
+  },
+  {
+    text: "SERVICES",
+    href: "#services",
+  },
+  {
+    text: "PROJECTS",
+    href: "#projects",
+  },
+  {
+    text: "CONTACT",
+    href: "#contact",
+  },
+];
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,39 +39,26 @@ const Navbar = () => {
             </h1>
           </Link>
           <ul className="hidden lg:flex space-x-12">
-            <li className="relative">
-              <Link
-                className="text-white text-medium tracking-menuSpacing font-slim hover:text-muted transition-all"
-                href={"#about"}
+            {LINKS.map((link, index) => (
+              <motion.li
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: [0, 1], scale: [0, 1] }}
+                exit={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: 2.75 + 0.25 * index,
+                  ease: "easeOut",
+                }}
               >
-                ABOUT
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                className="text-white text-medium tracking-menuSpacing font-slim hover:text-muted transition-all"
-                href={"#services"}
-              >
-                SERVICES
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="text-white text-medium tracking-menuSpacing font-slim hover:text-muted transition-all"
-                href={"#projects"}
-              >
-                PROJECTS
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="text-white text-medium tracking-menuSpacing font-slim hover:text-muted transition-all"
-                href={"#contact"}
-              >
-                CONTACT
-              </Link>
-            </li>
+                <Link
+                  href={link.href}
+                  className="group text-white text-medium tracking-menuSpacing font-slim hover:text-muted transition-all"
+                >
+                  {link.text}
+                  <div className="w-0 group-hover:w-full bg-white h-[0.5px] transition-all"></div>
+                </Link>
+              </motion.li>
+            ))}
           </ul>
           <span className="lg:hidden ms-auto">
             <FontAwesomeIcon
