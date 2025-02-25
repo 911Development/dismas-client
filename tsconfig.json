@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".", // Base directory for resolving non-relative imports
+    "paths": {
+      "@/*": ["./*"], // Map @/ to the root directory
+      "@styles/*": ["styles/*"] // Preserve @styles mapping
+    },
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "module": "esnext"
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
+  "exclude": ["node_modules"]
+}

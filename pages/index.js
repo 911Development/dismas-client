@@ -43,6 +43,8 @@ const services = [
   },
 ];
 
+// ! Minimum Delay: 2150 milliseconds
+
 export default function Home() {
   return (
     <>
@@ -57,10 +59,14 @@ export default function Home() {
               </p>
             </section>
             <section className="col-span-12 lg:col-span-4 flex flex-col justify-center lg:justify-start mb-12 lg:mb-0">
-              <img
+              <motion.img
                 src="/logo.png"
                 alt="Dismas"
                 className="w-52 lg:w-96 mx-auto mb-12"
+                initial={{ scale: 1.25 }}
+                animate={{ scale: [1.25, 1] }}
+                exit={{ scale: 1 }}
+                transition={{ delay: 2.5, ease: "easeOut", type: "tween" }}
               />
               <Link href={"#about"} className="mx-auto">
                 <button className="relative px-6 py-3 text-white font-semibold uppercase tracking-wide rounded-md border border-transparent bg-transparent">
