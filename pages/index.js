@@ -136,7 +136,7 @@ export default function Home() {
           <motion.img
             src="/about_icon.png"
             alt="Dismas About"
-            className="hidden lg:block w-[60%] absolute -bottom-20 right-0 translate-x-1/4 translate-y-1/2"
+            className="hidden lg:block w-[60%] absolute -bottom-1/2 right-0 translate-x-1/4 translate-y-1/2"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: [0, 1] }}
             transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}

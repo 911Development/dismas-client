@@ -51,6 +51,14 @@ const projects = [
       "https://play.google.com/store/apps/details?id=com.kibtaxi.kibtaxi",
   },
   {
+    name: "UpGolf",
+    year: 2024,
+    techStack: ["JavaScript", "React", "Next.js"],
+    description:
+      "Aristocrat Tourism served as a gathering spot for local golfers, but it quickly began to attract interest from surrounding regions.",
+    liveLink: "https://upgolfclub.com/",
+  },
+  {
     name: "DigitBuzz",
     year: 2025,
     techStack: [
@@ -80,14 +88,6 @@ const projects = [
       "We serve as a leading brand in the sector with high quality ship equipment and marine equipment. We offer innovative and durable solutions, keeping customer satisfaction at the forefront.",
     liveLink: "http://emesgemi.com/",
   },
-  {
-    name: "UpGolf",
-    year: 2024,
-    techStack: ["JavaScript", "React", "Next.js"],
-    description:
-      "Aristocrat Tourism served as a gathering spot for local golfers, but it quickly began to attract interest from surrounding regions.",
-    liveLink: "https://upgolfclub.com/",
-  },
 ];
 
 const Projects = () => {
@@ -108,7 +108,7 @@ const Projects = () => {
     <motion.section
       ref={ref}
       style={{ width }}
-      className="relative w-full lg:w-[85%] mx-auto lg:flex gap-3 lg:gap-0 rounded border bg-[#0f0f0f] p-10"
+      className="relative w-full lg:w-[85%] mx-auto lg:flex gap-3 lg:gap-0 rounded border glass p-10"
     >
       <section className="lg:w-1/2 mb-12 lg:mb-0 space-y-20">
         <div className="lg:sticky lg:top-32 lg:self-start">
