@@ -47,7 +47,7 @@ const Services = () => {
         <section className="border rounded-full inline-block text-start px-8 py-1 mb-8">
           <span className="font-[300] text-2xl lg:text-4xl">SERVICES</span>
         </section>
-        <section className="border rounded bg-[#0f0f0f]">
+        <section className="border rounded glass">
           {services.map((service) => (
             <motion.section
               initial={{ y: 150, opacity: 0.15 }}
