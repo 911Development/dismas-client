@@ -8,6 +8,7 @@ import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
 import { createPortal } from "react-dom";
 import { useRouter } from "next/router";
+import { useTranslation } from "react-i18next";
 
 const SidebarHeader = ({ handleSidebar }) => {
   //   const { t } = useTranslation();
@@ -36,54 +37,33 @@ const SidebarHeader = ({ handleSidebar }) => {
 
 const SidebarBody = ({ handleSidebar }) => {
   const router = useRouter();
-  //   const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const [languageType, setLanguageType] = useState(null);
 
   const { pathname } = router;
 
-  //   const handleSelectLanguage = (lng) => {
-  //     handleSidebar();
-  //     // setLanguageType(lng);
+  const handleSelectLanguage = (lng) => {
+    setLanguageType(lng);
 
-  //     i18n.changeLanguage(lng).then(() => {
-  //       router.replace(router.pathname, router.asPath, { locale: lng });
-  //     });
-  //   };
+    i18n.changeLanguage(lng).then(() => {
+      router.replace(router.pathname, router.asPath, { locale: lng });
+    });
+  };
+
+  useEffect(() => {
+    if (i18n.isInitialized) setLanguageType(i18n.language);
+  }, [i18n.language, i18n.isInitialized]);
+
+  if (!languageType) return;
 
   return (
     <div className="offcanvas-body flex overflow-x-hidden mb-auto">
       <section className="min-w-full py-6 px-4">
-        {/* <section className="grid grid-cols-12 gap-3">
-          <Link
-            href={process.env.NEXT_PUBLIC_FACEBOOK}
-            target="_blank"
-            className="col-span-6 bg-white shadow rounded p-4"
-          >
-            <section className="flex items-center gap-2 bg-gradient-to-r from-blue-800 to-blue-100 bg-clip-text text-transparent rounded mb-1">
-              <FontAwesomeIcon icon={faFacebook} className="text-blue-500" />
-              <span className="font-semibold">Facebook</span>
-            </section>
-            <p className="text-xs text-muted dark:text-muted-dark">
-              {t("follow_on_facebook")}
-            </p>
-          </Link>
-          <Link
-            href={process.env.NEXT_PUBLIC_INSTAGRAM}
-            target="_blank"
-            className="col-span-6 bg-white shadow rounded p-4"
-          >
-            <section className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-orange-500 bg-clip-text text-transparent rounded mb-1">
-              <FontAwesomeIcon icon={faInstagram} className="text-purple-500" />
-              <span className="font-semibold">Instagram</span>
-            </section>
-            <p className="text-xs text-muted dark:text-muted-dark">
-              {t("follow_on_instagram")}
-            </p>
-          </Link>
-        </section> */}
         {/* <hr className="border-gray-600 my-4" /> */}
         <ul className="space-y-3 mb-12">
           <li>
-            <h3 className="font-semibold px-4">MENU</h3>
+            <h3 className="font-semibold px-4">{t("menu")}</h3>
           </li>
           <li>
             <Link
@@ -94,7 +74,7 @@ const SidebarBody = ({ handleSidebar }) => {
               onClick={() => handleSidebar()}
             >
               {/* <FontAwesomeIcon icon={faInfoCircle} /> */}
-              <span className="text-lg">ABOUT</span>
+              <span className="text-lg">{t("nav_about")}</span>
             </Link>
           </li>
 
@@ -107,7 +87,7 @@ const SidebarBody = ({ handleSidebar }) => {
               onClick={handleSidebar}
             >
               {/* <FontAwesomeIcon icon={faUsers} /> */}
-              <span className="text-lg">SERVICES</span>
+              <span className="text-lg">{t("nav_services")}</span>
             </Link>
           </li>
           <li>
@@ -119,7 +99,7 @@ const SidebarBody = ({ handleSidebar }) => {
               onClick={handleSidebar}
             >
               {/* <FontAwesomeIcon icon={faProjectDiagram} /> */}
-              <span className="text-lg">PROJECTS</span>
+              <span className="text-lg">{t("nav_projects")}</span>
             </Link>
           </li>
           <li>
@@ -131,13 +111,13 @@ const SidebarBody = ({ handleSidebar }) => {
               onClick={handleSidebar}
             >
               {/* <FontAwesomeIcon icon={faProjectDiagram} /> */}
-              <span className="text-lg">CONTACT</span>
+              <span className="text-lg">{t("nav_contact")}</span>
             </Link>
           </li>
         </ul>
-        <ul className="space-y-3">
+        <ul className="space-y-3 mb-12">
           <li>
-            <h3 className="font-semibold px-4">SOCIALS</h3>
+            <h3 className="font-semibold px-4">{t("socials")}</h3>
           </li>
           <li>
             <Link
@@ -166,6 +146,37 @@ const SidebarBody = ({ handleSidebar }) => {
             </Link>
           </li>
         </ul>
+        <ul className="space-y-3">
+          <li>
+            <h3 className="font-semibold px-4">{t("language")}</h3>
+          </li>
+          <li className="flex items-center gap-3">
+            <span
+              className={`flex items-center gap-2 ${
+                languageType !== "tr" && "font-slim"
+              } rounded py-3 px-4 text-lg text-muted`}
+              onClick={function () {
+                handleSelectLanguage("tr");
+
+                handleSidebar();
+              }}
+            >
+              TR
+            </span>
+            <span
+              className={`flex items-center gap-2 ${
+                languageType !== "en" && "font-slim"
+              } rounded py-3 px-4 text-lg text-muted`}
+              onClick={function () {
+                handleSelectLanguage("en");
+
+                handleSidebar();
+              }}
+            >
+              EN
+            </span>
+          </li>
+        </ul>
         {/* <hr className="border-gray-600 my-4" /> */}
       </section>
     </div>
@@ -173,13 +184,11 @@ const SidebarBody = ({ handleSidebar }) => {
 };
 
 const SidebarFooter = () => {
-  //   const { t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className="offcanvas-footer mt-auto p-4">
-      <p className="text-sm lg:hidden">
-        © Dismas Studio {new Date().getFullYear()}, all rights reserved.
-      </p>
+      <p className="text-sm lg:hidden">{t("all_rights_reserved")}</p>
     </div>
   );
 };

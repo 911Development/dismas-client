@@ -2,32 +2,41 @@ import Link from "next/link";
 import Container from "../Container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Sidebar from "./Sidebar";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 
 const LINKS = [
-  {
-    text: "ABOUT",
-    href: "#about",
-  },
-  {
-    text: "SERVICES",
-    href: "#services",
-  },
-  {
-    text: "PROJECTS",
-    href: "#projects",
-  },
-  {
-    text: "CONTACT",
-    href: "#contact",
-  },
+  { text: "nav_about", href: "#about" },
+  { text: "nav_services", href: "#services" },
+  { text: "nav_projects", href: "#projects" },
+  { text: "nav_contact", href: "#contact" },
 ];
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const { t, i18n } = useTranslation();
+  const router = useRouter();
+  const [languageType, setLanguageType] = useState(null);
+
   const handleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  const handleSelectLanguage = (lng) => {
+    setLanguageType(lng);
+
+    i18n.changeLanguage(lng).then(() => {
+      router.replace(router.pathname, router.asPath, { locale: lng });
+    });
+  };
+
+  useEffect(() => {
+    if (i18n.isInitialized) setLanguageType(i18n.language);
+  }, [i18n.language, i18n.isInitialized]);
+
+  if (!languageType) return;
 
   return (
     <>
@@ -41,6 +50,7 @@ const Navbar = () => {
           <ul className="hidden lg:flex space-x-12">
             {LINKS.map((link, index) => (
               <motion.li
+                key={index} // ✅ Add key for React
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: [0, 1], scale: [0, 1] }}
                 exit={{ opacity: 1, scale: 1 }}
@@ -54,11 +64,19 @@ const Navbar = () => {
                   href={link.href}
                   className="group text-white text-medium tracking-menuSpacing font-slim hover:text-muted transition-all"
                 >
-                  {link.text}
+                  {t(link.text)}
                   <div className="w-0 group-hover:w-full bg-white h-[0.5px] transition-all"></div>
                 </Link>
               </motion.li>
             ))}
+            <li
+              onClick={() =>
+                handleSelectLanguage(languageType === "en" ? "tr" : "en")
+              }
+              className="text-white text-medium tracking-menuSpacing font-slim hover:text-muted transition-all cursor-pointer"
+            >
+              {languageType?.toUpperCase() || "EN"}
+            </li>
           </ul>
           <span className="lg:hidden ms-auto">
             <FontAwesomeIcon

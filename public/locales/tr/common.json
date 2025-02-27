@@ -1,0 +1,48 @@
+{
+  "nav_about": "HAKKIMIZDA",
+  "nav_services": "HİZMETLER",
+  "nav_projects": "PROJELER",
+  "nav_contact": "İLETİŞİM",
+
+  "header_1": "UI Tasarımı ve Yazılım Geliştirme projeleri için bizimle iletişime geçin",
+  "header_2": "DISMAS, KKTC merkezli bir tasarım ve geliştirme stüdyosudur",
+
+  "explore": "DISMAS'I KEŞFEDİN",
+
+  "about_desc": "Dismas sadece bir isim değil, kim olduğumuzun ve neyi temsil ettiğimizin bir sembolüdür. Tarih boyunca mottolar, duygu, umut ve amaç taşıyan savaş çığlıkları olmuştur. Müşterilerimiz için, onların değerlerini yansıtan ve ilham veren mottolar oluşturuyoruz.",
+  "project_desc": "Her ölçekten projede ve dünyanın her yerinde uzmanlığımızı sunuyoruz.",
+
+  "services_title_01": "FRONTEND GELİŞTİRME",
+  "services_title_02": "BACKEND GELİŞTİRME",
+  "services_title_03": "UI / UX TASARIMI",
+  "services_title_04": "TEKNİK DANIŞMANLIK",
+  "services_title_05": "MOBİL UYGULAMA GELİŞTİRME",
+  "services_title_06": "MARKA KİMLİĞİ",
+
+  "services_01_desc": "Web sitenizin kullanıcı arayüzünü ve deneyimini geliştirmeye odaklanmış bir ekibiz. Front-End Geliştirme hizmetimizle, HTML, CSS ve JavaScript gibi teknolojileri kullanarak modern ve etkileyici kullanıcı arayüzleri oluşturuyoruz. Sitenizin hızlı yüklenmesini, duyarlı olmasını ve tarayıcılarla uyumlu çalışmasını sağlayarak, kullanıcılarınız için sorunsuz bir deneyim sunmayı hedefliyoruz.",
+  "services_02_desc": "Web sitenizin güçlü bir altyapıya sahip olmasını sağlıyoruz. Back-End Geliştirme hizmetimizle, işletmenizin özel gereksinimlerini karşılayacak özelleştirilmiş web uygulamaları geliştiriyoruz. Veritabanı yönetimi, sunucu tarafı programlama dilleri ve API entegrasyonu gibi teknolojileri kullanarak, sitenizin verimli çalışmasını, güvenliğini ve ölçeklenebilirliğini sağlıyoruz.",
+  "services_03_desc": "Web sitenizin kullanıcı dostu ve görsel olarak etkileyici bir tasarıma sahip olmasını sağlıyoruz. UI/UX tasarım hizmetimizle, hedef kitlenizle uyumlu estetik ve işlevsel bir deneyim oluşturuyoruz. Kullanıcı odaklı tasarımlarımız, etkileşim sürecini basit, sezgisel ve keyifli hale getirir. Ayrıca, hem mobil hem de masaüstü kullanıcıları için sorunsuz çalışan duyarlı tasarımlar sunarak en iyi deneyimi garanti ediyoruz.",
+  "services_04_desc": "İşletme sistemlerinizi ve altyapınızı optimize etmenize yardımcı olmak için uzman teknik danışmanlık sağlıyoruz. Ekibimiz mevcut yapınızı analiz eder, iyileştirme fırsatlarını belirler ve performans, güvenlik ve ölçeklenebilirliği artıracak çözümler önerir. Teknolojinizin hedeflerinizle uyumlu olmasını sağlayarak, uzun vadeli büyüme ve verimliliği destekliyoruz.",
+  "services_05_desc": "İşletmenizi hareket halindeyken yönetmenizi sağlamak için mobil uygulama geliştirme hizmetleri sunuyoruz. Uygulamalarımız, görev yönetimi, ödeme işlemleri ve bildirimler gibi işlevleri içerecek şekilde kullanıcı dostu ve işlevsel olacak şekilde tasarlanmıştır. Operasyonları kolaylaştıran ve verimliliği artıran kusursuz deneyimler oluşturmayı hedefliyoruz.",
+  "services_06_desc": "Marka kimliğinizin güçlü ve akılda kalıcı bir şekilde temsil edilmesini sağlıyoruz. Özel logo tasarımı, renk paletleri ve vizyonunuz ile değerlerinize uygun tipografi ile markanızın tutarlı bir ifadesini oluşturuyoruz. Markanızın kişiliğini ve mesajını her detayda etkili bir şekilde ileten bir kimlik tasarlıyoruz.",
+
+  "ellie_project_desc": "Ekibimiz olarak, kullanıcıların ev aletlerini uzaktan kontrol etmelerini sağlayan bu mobil uygulamayı geliştirdik ve IoT entegrasyonu için backend bağlantılarını optimize ettik.",
+  "kibrisevim_project_desc": "Ekibimiz olarak, kullanıcıların ev aletlerini uzaktan kontrol etmelerini sağlayan bu mobil uygulamayı geliştirdik ve IoT entegrasyonu için backend bağlantılarını optimize ettik.",
+  "kibtaxi_project_desc": "Kıbrıs Taksi & KKTC taksilerini incelemeleri, fotoğrafları ve iletişim seçenekleriyle birlikte bulun.",
+  "upgolf_project_desc": "Aristocrat Turizm, başlangıçta yerel golfçüler için bir buluşma noktası olarak hizmet verdi, ancak kısa sürede çevre bölgelerden de ilgi görmeye başladı.",
+  "digitbuzz_project_desc": "DigitBuzz - Online Pazarlama",
+  "yildiztas_project_desc": "Hayallerinizi gerçeğe dönüştürüyoruz. Başarıya birlikte ulaşıyoruz.",
+  "emesgemi_project_desc": "Yüksek kaliteli gemi ekipmanları ve denizcilik malzemeleriyle sektörde öncü bir marka olarak hizmet veriyoruz. Yenilikçi ve dayanıklı çözümler sunarak müşteri memnuniyetini ön planda tutuyoruz.",
+
+  "menu": "MENÜ",
+  "socials": "BAĞLANTILAR",
+
+  "explore_dismas": "DISMAS'I KEŞFET",
+
+  "footer_desc": "2025, Kıbrıs",
+  "footer_desc_2": "2025, Kıbrıs",
+
+  "language": "DİL",
+
+  "all_rights_reserved": "© Dismas Studio 2025, tüm hakları saklıdır."
+}

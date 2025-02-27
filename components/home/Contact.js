@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <motion.section
@@ -14,7 +17,9 @@ const Contact = () => {
         className="flex items-center justify-center py-12"
       >
         <section className="border rounded-full inline-block text-start px-8 py-1">
-          <span className="font-[300] text-2xl lg:text-4xl">CONTACT</span>
+          <span className="font-[300] text-2xl lg:text-4xl">
+            {t("nav_contact")}
+          </span>
         </section>
       </motion.section>
       <motion.section
