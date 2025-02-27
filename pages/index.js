@@ -7,25 +7,56 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { FlipWords } from "@/components/ui/flip-words";
 import Contact from "@/components/home/Contact";
 import Services from "@/components/home/Services";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
 
-const main_words_1 = `
+const main_words_1_en = `
 Contact us for UI
 Design and Software
 Development Projects`;
 
-const main_words_2 = `
+const main_words_1_tr = `
+UI Tasarımı ve Yazılım
+Geliştirme projeleri için
+bizimle iletişime geçin
+`;
+
+const main_words_2_en = `
 DISMAS is TRNC
 based design and
 Development Studio
 `;
 
-const flip_words = [
+const main_words_2_tr = `
+DISMAS, KKTC merkezli
+bir tasarım ve yazılım
+geliştirme stüdyosudur
+`;
+
+const flip_words_en = [
   "Dismas is more than our name, it’s a symbol of who we are and what we stand for. Historically, mottos were war-cries of sentiment, hope and purpose. We create mottos for our clients that serve as a rallying car.",
+];
+
+const flip_words_tr = [
+  "Dismas, sadece bir isim değil, kim olduğumuzun ve neyi temsil ettiğimizin bir sembolüdür. Tarih boyunca sloganlar, duygu, umut ve amaç içeren savaş naraları olmuştur. Müşterilerimiz için, onları bir araya getiren ve motive eden sloganlar oluşturuyoruz.",
 ];
 
 // ! Minimum Delay: 2150 milliseconds
 
 export default function Home() {
+  const { t, i18n } = useTranslation();
+
+  const [lang, setLang] = useState(null);
+
+  console.log("lang: ", lang);
+
+  useEffect(() => {
+    if (i18n.isInitialized) setLang(i18n.language);
+  }, [i18n.language, i18n.isInitialized]);
+
+  if (!lang) return;
+
   return (
     <>
       <Head></Head>
@@ -37,7 +68,9 @@ export default function Home() {
                 Contact us for UI{"\n"}Design and Software{"\n"}Development
                 Projects
               </p> */}
-              <TextGenerateEffect words={main_words_1} />
+              <TextGenerateEffect
+                words={lang === "en" ? main_words_1_en : main_words_1_tr}
+              />
             </section>
             <section className="col-span-12 lg:col-span-4 flex flex-col justify-center lg:justify-start mb-12 lg:mb-0">
               <motion.img
@@ -61,7 +94,7 @@ export default function Home() {
                     <span className="absolute inset-0 border border-transparent bg-gradient-to-r from-gray-400 via-gray-600 to-gray-400"></span>
                     <span className="absolute inset-[1px] bg-black"></span>
                     <span className="relative font-[200] group-hover:font-[400] transition-all">
-                      EXPLORE DISMAS
+                      {t("explore_dismas")}
                     </span>
                   </button>
                 </Link>
@@ -71,7 +104,9 @@ export default function Home() {
               {/* <p className="text-3xl font-[200] text-center lg:text-justify whitespace-pre-line">
                 DISMAS is TRNC{"\n"}based design and{"\n"}Development Studio
               </p> */}
-              <TextGenerateEffect words={main_words_2} />
+              <TextGenerateEffect
+                words={lang === "en" ? main_words_2_en : main_words_2_tr}
+              />
             </section>
           </section>
         </Container>
@@ -130,7 +165,10 @@ export default function Home() {
                 sentiment, hope and purpose. We create mottos for our clients
                 that serve as a rallying car.
               </p> */}
-              <FlipWords words={flip_words} />
+              <FlipWords
+                lang={lang}
+                words={lang === "en" ? flip_words_en : flip_words_tr}
+              />
             </section>
           </Container>
           <motion.img
@@ -163,4 +201,12 @@ export default function Home() {
       </section>
     </>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
 }

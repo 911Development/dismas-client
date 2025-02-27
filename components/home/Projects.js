@@ -1,5 +1,6 @@
 import { useScroll, motion, useTransform } from "framer-motion";
 import React, { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 const projects = [
   {
@@ -13,8 +14,7 @@ const projects = [
       "React.js",
       "Next.js",
     ],
-    description:
-      "As a team, we developed this mobile application to enable users to control home appliances remotely, we optimized backend connections for IoT integration.",
+    description: "ellie_project_desc",
     liveLink: "https://elliesmarthome.com/",
   },
   {
@@ -28,8 +28,7 @@ const projects = [
       "React.js",
       "Next.js",
     ],
-    description:
-      "As a team, we developed this mobile application to enable users to control home appliances remotely, we optimized backend connections for IoT integration.",
+    description: "kibrisevim_project_desc",
     liveLink: "http://kibrisevim.com/",
   },
   {
@@ -45,8 +44,7 @@ const projects = [
       "Google Cloud",
       "AWS Web Services",
     ],
-    description:
-      "Find Kıbrıs Taksi & TRNC taksi with their reviews, photos, and contact options.",
+    description: "kibtaxi_project_desc",
     liveLink:
       "https://play.google.com/store/apps/details?id=com.kibtaxi.kibtaxi",
   },
@@ -54,8 +52,7 @@ const projects = [
     name: "UpGolf",
     year: 2024,
     techStack: ["JavaScript", "React", "Next.js"],
-    description:
-      "Aristocrat Tourism served as a gathering spot for local golfers, but it quickly began to attract interest from surrounding regions.",
+    description: "upgolf_project_desc",
     liveLink: "https://upgolfclub.com/",
   },
   {
@@ -69,29 +66,28 @@ const projects = [
       "MongoDB",
       "Figma",
     ],
-    description: "DigitBuzz - Online Marketing",
-    liveLink: "https://www.digitbuzz.com/en",
+    description: "digitbuzz_project_desc",
+    liveLink: "https://digitbuzz.com/",
   },
   {
     name: "Yıldız Taş",
     year: 2025,
     techStack: ["JavaScript", "React", "Next.js", "Vite", "Figma"],
-    description:
-      "Turning Your Dreams Into Reality. We achieve success together.",
+    description: "yildiztas_project_desc",
     liveLink: "https://www.yildiztasconstructions.com/",
   },
   {
     name: "EmesGemi",
     year: 2025,
     techStack: ["JavaScript", "React", "Next.js", "Vite", "Figma"],
-    description:
-      "We serve as a leading brand in the sector with high quality ship equipment and marine equipment. We offer innovative and durable solutions, keeping customer satisfaction at the forefront.",
+    description: "emesgemi_project_desc",
     liveLink: "http://emesgemi.com/",
   },
 ];
 
 const Projects = () => {
   const ref = useRef(null);
+  const { t } = useTranslation();
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -113,7 +109,9 @@ const Projects = () => {
       <section className="lg:w-1/2 mb-12 lg:mb-0 space-y-20">
         <div className="lg:sticky lg:top-32 lg:self-start">
           <section className="hidden lg:inline-block border rounded-full text-start px-8 py-1 mb-8">
-            <span className="font-[300] text-2xl lg:text-4xl">PROJECTS</span>
+            <span className="font-[300] text-2xl lg:text-4xl">
+              {t("nav_projects")}
+            </span>
           </section>
           <section className="lg:hidden flex items-center justify-center">
             <span className="border px-8 py-1 mb-8 rounded-full font-[300] text-2xl lg:text-4xl">
@@ -121,13 +119,11 @@ const Projects = () => {
             </span>
           </section>
           <p className="hidden lg:block text-3xl w-[340px] text-justify lg:mb-0">
-            We provide our expertise on projects of any scale, and anywhere in
-            the world.
+            {t("project_desc")}
           </p>
           <section className="lg:hidden">
             <p className="text-2xl w-[92%] mx-auto text-center">
-              We provide our expertise on projects of any scale, and anywhere in
-              the world.
+              {t("project_desc")}
             </p>
           </section>
         </div>
@@ -183,7 +179,7 @@ const Projects = () => {
                 className="border border-gray-500 h-[0.5px] w-full my-3"
               />
               <p className="mt-4 text-gray-300 opacity-0">
-                {project.description}
+                {t(project.description)}
               </p>
               <motion.hr
                 ref={hrRef}
@@ -205,21 +201,21 @@ const Projects = () => {
       <section className="lg:w-1/2 space-y-20">
         <div className="opacity-0 hidden lg:block">
           <section className="hidden lg:inline-block border rounded-full text-start px-8 py-1 mb-8">
-            <span className="font-[300] text-2xl lg:text-4xl">PROJECTS</span>
+            <span className="font-[300] text-2xl lg:text-4xl">
+              {t("nav_project")}
+            </span>
           </section>
           <section className="lg:hidden flex items-center justify-center">
             <span className="border px-8 py-1 mb-8 rounded-full font-[300] text-2xl lg:text-4xl">
-              PROJECTS
+              {t("nav_project")}
             </span>
           </section>
           <p className="hidden lg:block text-3xl w-[340px] text-justify lg:mb-0">
-            We provide our expertise on projects of any scale, and anywhere in
-            the world.
+            {t("project_desc")}
           </p>
           <section className="lg:hidden">
             <p className="text-2xl w-[92%] mx-auto text-center">
-              We provide our expertise on projects of any scale, and anywhere in
-              the world.
+              {t("project_desc")}
             </p>
           </section>
         </div>
@@ -245,7 +241,7 @@ const Projects = () => {
               ))}
             </div>
             <hr className="border border-gray-500 h-[0.5px] w-full my-3" />
-            <p className="mt-4 text-gray-300">{project.description}</p>
+            <p className="mt-4 text-gray-300">{t(project.description)}</p>
             <hr className="border border-gray-500 h-[0.5px] w-full my-3" />
             <a
               href={project.liveLink}

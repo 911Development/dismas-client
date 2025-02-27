@@ -6,10 +6,12 @@ export const FlipWords = ({
   words,
   duration = 3000,
   className,
+  lang,
 }: {
   words: string[];
   duration?: number;
   className?: string;
+  lang: string;
 }) => {
   const [currentWord, setCurrentWord] = useState(words[0]);
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
@@ -21,11 +23,19 @@ export const FlipWords = ({
   }, [currentWord, words]);
 
   useEffect(() => {
-    if (!isAnimating)
-      setTimeout(() => {
+    if (!isAnimating) {
+      const timer = setTimeout(() => {
         startAnimation();
       }, duration);
+
+      return () => clearTimeout(timer);
+    }
   }, [isAnimating, duration, startAnimation]);
+
+  useEffect(() => {
+    setCurrentWord(words[0]);
+    setIsAnimating(false);
+  }, [words, lang]);
 
   return (
     <AnimatePresence
@@ -60,7 +70,7 @@ export const FlipWords = ({
           "font-[200] lg:w-[60%] text-3xl lg:text-6xl mb-8 lg:mb-0 text-justify",
           className
         )}
-        viewport={{ once: true }} // 1 kez
+        viewport={{ once: true }}
         key={currentWord}
       >
         {currentWord.split(" ").map((word, wordIndex) => (
@@ -72,7 +82,7 @@ export const FlipWords = ({
               delay: wordIndex * 0.015,
               duration: 0.3,
             }}
-            viewport={{ once: true }} // 1 kez
+            viewport={{ once: true }}
             className="inline-block whitespace-nowrap"
           >
             {word.split("").map((letter, letterIndex) => (
@@ -84,7 +94,7 @@ export const FlipWords = ({
                   delay: wordIndex * 0.015 + letterIndex * 0.015,
                   duration: 0.2,
                 }}
-                viewport={{ once: true }} // 1 kez
+                viewport={{ once: true }}
                 className="inline-block"
               >
                 {letter}

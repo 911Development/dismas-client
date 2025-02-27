@@ -1,0 +1,48 @@
+{
+  "nav_about": "ABOUT",
+  "nav_services": "SERVICES",
+  "nav_projects": "PROJECTS",
+  "nav_contact": "CONTACT",
+
+  "header_1": "Contact us for UI Design and  Software Development projects",
+  "header_2": "DISMAS is KKTC based design and development studio",
+
+  "explore": "EXPLORE DISMAS",
+
+  "about_desc": "Dismas is more than our name, it’s a symbol of who we are and what we stand for. Historically, mottos were war-cries of sentiment, hope and purpose. We create mottos for our clients that serve as a rallying car.",
+  "project_desc": "We provide our expertise on projects of any scale, and anywhere in the world.",
+
+  "services_title_01": "FRONT-END DEVELOPMENT",
+  "services_title_02": "BACK-END DEVELOPMENT",
+  "services_title_03": "UI / UX DESIGN",
+  "services_title_04": "TECHNICAL CONSULTING",
+  "services_title_05": "MOBILE APP DEVELOPMENT",
+  "services_title_06": "BRAND IDENTITY",
+
+  "services_01_desc": "We are a team specialized in enhancing the user interface and experience of your website. With our Front-End Development service, we use technologies such as HTML, CSS and JavaScript to create modern and impressive user interfaces. We aim to ensure that your site is fast loading, responsive and compatible across browsers so that your users have a seamless experience.",
+  "services_02_desc": "We are here to ensure that your website has a strong infrastructure. With our Back-End Development service, we develop customized web applications to meet the specific requirements of your business. Using technologies such as database management, server-side programming languages and API integration, we ensure the efficient operation, security and scalability of your site.",
+  "services_03_desc": "We ensure your website has a user-friendly and visually appealing design. With our UI/UX design service, we create an aesthetic and functional experience that resonates with your target audience. Our user-centric designs make the interaction process simple, intuitive, and enjoyable for your visitors. Additionally, we provide responsive designs that work flawlessly across all devices, ensuring the best experience for both mobile and desktop users.",
+  "services_04_desc": "We provide expert technical consulting to help optimize your business systems and infrastructure. Our team analyzes your existing setup, identifies opportunities for improvement, and recommends solutions that enhance performance, security, and scalability. We ensure your technology aligns with your goals, supporting long-term growth and efficiency.",
+  "services_05_desc": "We provide mobile app development services to help you manage your business on the go. Our apps are designed to be user-friendly and functional, with features like task management, payment processing, and notifications, all tailored to your specific needs. We focus on creating seamless experiences that simplify operations and boost efficiency.",
+  "services_06_desc": "We ensure your brand identity is represented in a strong and memorable way. Through customized logo design, color palettes, and typography that align with your vision and values, we create a consistent expression of your brand. We design an identity that effectively communicates your brand’s personality and message in every detail.",
+
+  "ellie_project_desc": "As a team, we developed this mobile application to enable users to control home appliances remotely, we optimized backend connections for IoT integration.",
+  "kibrisevim_project_desc": "As a team, we developed this mobile application to enable users to control home appliances remotely, we optimized backend connections for IoT integration.",
+  "kibtaxi_project_desc": "Find Kıbrıs Taksi & TRNC taksi with their reviews, photos, and contact options.",
+  "upgolf_project_desc": "Aristocrat Tourism served as a gathering spot for local golfers, but it quickly began to attract interest from surrounding regions.",
+  "digitbuzz_project_desc": "DigitBuzz - Online Marketing",
+  "yildiztas_project_desc": "Turning Your Dreams Into Reality. We achieve success together.",
+  "emesgemi_project_desc": "We serve as a leading brand in the sector with high quality ship equipment and marine equipment. We offer innovative and durable solutions, keeping customer satisfaction at the forefront.",
+
+  "menu": "MENU",
+  "socials": "SOCIALS",
+
+  "explore_dismas": "EXPLORE DISMAS",
+
+  "footer_desc": "2025 Based in Cyprus",
+  "footer_desc_2": "2025, Cyprus",
+
+  "language": "LANGUAGE",
+
+  "all_rights_reserved": "© Dismas Studio 2025, all rights reserved."
+}
