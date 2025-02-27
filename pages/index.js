@@ -63,10 +63,12 @@ export default function Home() {
                 className="w-52 lg:w-96 mx-auto mb-12"
               />
               <Link href={"#about"} className="mx-auto">
-                <button className="relative px-6 py-3 text-white font-semibold uppercase tracking-wide rounded-md border border-transparent bg-transparent">
+                <button className="relative px-12 py-6 text-white font-semibold uppercase tracking-wide rounded-md border border-transparent bg-transparent">
                   <span className="absolute inset-0 border border-transparent bg-gradient-to-r from-gray-300 via-gray-600 to-gray-300"></span>
                   <span className="absolute inset-[1px] bg-black"></span>
-                  <span className="relative">EXPLORE DISMAS</span>
+                  <span className="relative text-medium tracking-menuSpacing font-slim hover:text-muted transition-all">
+                    EXPLORE DISMAS
+                  </span>
                 </button>
               </Link>
             </section>
@@ -77,7 +79,7 @@ export default function Home() {
             </section>
           </section>
         </Container>
-        <section className="hidden my-40 lg:flex items-center justify-center overflow-hidden whitespace-nowrap">
+        <section className="hidden my-20 lg:flex items-center justify-center overflow-hidden whitespace-nowrap">
           <motion.div
             className="flex items-center space-x-[50vw] sm:space-x-10 text-7xl font-[300]"
             animate={{ x: ["0%", "-50%"] }}
@@ -120,8 +122,10 @@ export default function Home() {
         </section>
         <section id="about" className="relative mb-96">
           <Container>
-            <section className="border rounded-full me-auto px-8 py-1 mb-8">
-              <span className="font-[300] text-2xl text-start">ABOUT</span>
+            <section className="border rounded-full me-auto px-8 py-2 mb-8">
+              <span className="font-[300] text-large tracking-menuSpacing">
+                ABOUT
+              </span>
             </section>
             <section className="">
               <p className="font-[200] lg:w-[60%] text-3xl lg:text-6xl mb-8 lg:mb-0 text-justify">
@@ -145,8 +149,15 @@ export default function Home() {
         </section>
         <Container>
           <section id="services" className="w-full mb-96 select-none">
-            <section className="border rounded-full inline-block text-start px-8 py-1 mb-8">
-              <span className="font-[300] text-2xl">SERVICES</span>
+            <section
+              id="Services"
+              className="flex items-center justify-start mb-10"
+            >
+              <section className="border rounded-full inline-block text-start px-8 py-2">
+                <span className="font-[300] text-large tracking-menuSpacing">
+                  SERVICES
+                </span>
+              </section>
             </section>
             <section className="border rounded bg-[#2b2b2b]">
               {services.map((service) => (
@@ -167,15 +178,20 @@ export default function Home() {
           <section id="projects" className="mb-48">
             <Projects />
           </section>
-          <section id="contact" className="flex items-center justify-center">
-            <section className="border rounded-full inline-block text-start px-8 py-1 mb-8">
-              <span className="font-[300] text-2xl">CONTACT</span>
+          <section
+            id="contact"
+            className="flex items-center justify-center mb-12"
+          >
+            <section className="border rounded-full inline-block text-start px-8 py-2 mb-8">
+              <span className="font-[300] text-large tracking-menuSpacing">
+                CONTACT
+              </span>
             </section>
           </section>
           <section className="text-center">
             <a
               href="mailto:DISMAS@STUDIO.COM"
-              className="text-3xl lg:text-6xl font-bold hover:opacity-80 transition-all"
+              className="text-xlarge tracking-menuSpacing font-slim hover:text-muted hover:opacity-80 transition-all"
             >
               DISMAS@STUDIO.COM
             </a>

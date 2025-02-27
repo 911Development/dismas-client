@@ -77,8 +77,15 @@ const Projects = () => {
   return (
     <section className="lg:grid lg:grid-cols-12 gap-4">
       <section className="lg:col-span-5">
-        <section className="border rounded-full inline-block text-start px-8 py-1 mb-8">
-          <span className="font-[300] text-2xl">PROJECTS</span>
+        <section
+          id="Projects"
+          className="flex items-center justify-start mb-10"
+        >
+          <section className="border rounded-full inline-block text-start px-8 py-2">
+            <span className="font-[300] text-large tracking-menuSpacing">
+              PROJECTS
+            </span>
+          </section>
         </section>
         <p className="text-3xl">
           We provide our expertise on projects of any scale, and anywhere in the

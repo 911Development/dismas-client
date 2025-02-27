@@ -162,7 +162,7 @@ const SidebarBody = ({ handleSidebar }) => {
               onClick={handleSidebar}
             >
               {/* <FontAwesomeIcon icon={faProjectDiagram} /> */}
-              <span className="text-lg">INTAGRAM</span>
+              <span className="text-lg">INSTAGRAM</span>
             </Link>
           </li>
         </ul>

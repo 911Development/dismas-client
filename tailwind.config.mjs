@@ -60,8 +60,8 @@ export default {
       fontSize: {
         small: "1rem",
         medium: "1.4rem",
-        large: "2rem",
-        xlarge: "2.5rem",
+        large: "1.8rem",
+        xlarge: "4.5rem",
         xxlarge: "15rem",
         xxlargealt: "13rem",
         xxxlarge: "30rem",
