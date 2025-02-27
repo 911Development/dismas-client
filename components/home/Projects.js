@@ -248,7 +248,7 @@ const Projects = () => {
               className="text-gray-400 hover:text-white mt-4 inline-block hover:underline transition-all"
               target="_blank"
             >
-              See it live →
+              {t("see_it_live")} →
             </a>
           </div>
         ))}
