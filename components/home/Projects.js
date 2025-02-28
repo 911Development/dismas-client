@@ -1,6 +1,8 @@
 import { useScroll, motion, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { LinkPreview } from "../ui/link-preview";
+import Link from "next/link";
 
 const projects = [
   {
@@ -243,13 +245,20 @@ const Projects = () => {
             <hr className="border border-gray-500 h-[0.5px] w-full my-3" />
             <p className="mt-4 text-gray-300">{t(project.description)}</p>
             <hr className="border border-gray-500 h-[0.5px] w-full my-3" />
-            <a
+            {/* <a
               href={project.liveLink}
               className="text-gray-400 hover:text-white mt-4 inline-block hover:underline transition-all"
               target="_blank"
             >
-              See it live →
-            </a>
+              {t("see_it_live")} →
+            </a> */}
+
+            <LinkPreview
+              url={project.liveLink}
+              className="text-gray-400 hover:text-white mt-4 inline-block hover:underline transition-all"
+            >
+              {t("see_it_live")} →
+            </LinkPreview>
           </div>
         ))}
       </section>
