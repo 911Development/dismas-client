@@ -90,10 +90,10 @@ export default function Home() {
                 className="flex items-center justify-center py-4"
               >
                 <Link href={"#about"} className="group mx-auto">
-                  <button className="relative px-6 py-3 text-white font-semibold uppercase tracking-[5px] rounded-md border border-transparent bg-transparent">
+                  <button className="relative px-12 py-6 text-white font-semibold uppercase tracking-[5px] rounded-md border border-transparent bg-transparent">
                     <span className="absolute inset-0 border border-transparent bg-gradient-to-r from-gray-400 via-gray-600 to-gray-400"></span>
                     <span className="absolute inset-[1px] bg-black"></span>
-                    <span className="relative font-[200] group-hover:font-[400] transition-all">
+                    <span className="relative text-medium tracking-menuSpacing font-slim hover:text-muted transition-all">
                       {t("explore_dismas")}
                     </span>
                   </button>
@@ -110,7 +110,7 @@ export default function Home() {
             </section>
           </section>
         </Container>
-        <section className="hidden my-40 lg:flex items-center justify-center overflow-hidden whitespace-nowrap">
+        <section className="hidden my-20 lg:flex items-center justify-center overflow-hidden whitespace-nowrap">
           <motion.div
             className="flex items-center space-x-[50vw] sm:space-x-10 text-7xl font-[300]"
             animate={{ x: ["0%", "-50%"] }}
@@ -153,8 +153,8 @@ export default function Home() {
         </section>
         <section id="about" className="relative my-96">
           <Container>
-            <section className="border rounded-full me-auto px-8 py-1 mb-8">
-              <span className="font-[300] text-2xl lg:text-4xl text-start">
+            <section className="border rounded-full me-auto px-8 py-2 mb-8">
+              <span className="font-[300] text-large tracking-menuSpacing">
                 ABOUT
               </span>
             </section>

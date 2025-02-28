@@ -3,6 +3,7 @@ import Navbar from "./ui/Navbar";
 import Container from "./Container";
 import SplashScreen from "@/pages/SplashScreen";
 import { useTranslation } from "react-i18next";
+import Arrow from "../public/TRY.svg";
 import { useEffect, useState } from "react";
 
 const Layout = ({ children }) => {
@@ -22,23 +23,35 @@ const Layout = ({ children }) => {
         <Container className="flex !flex-row items-center justify-between px-0">
           {isClient ? (
             <>
-              <p className="text-xl">{t("footer_desc")}</p>
+              <p className="hidden lg:block text-medium tracking-menuSpacing font-slim hover:text-muted transition-all">{t("footer_desc")}</p>
               {/* <p className="lg:hidden text-xl">{t("footer_desc_2")}</p> */}
             </>
           ) : (
-            <p className="text-xl">&nbsp;</p>
+            <p className="text-medium">&nbsp;</p>
           )}
           <nav>
             <ul className="flex items-center justify-center gap-2 lg:gap-3">
               <li>
-                <Link href={"/"} className="text-lg lg:text-2xl">
-                  LinkedIn
-                </Link>
+                <div className="flex flex-row  items-center">
+                  <Link
+                    href={"/"}
+                    className="text-medium tracking-menuSpacing font-slim hover:text-muted transition-all"
+                  >
+                    LINKEDIN
+                  </Link>
+                  <Arrow width="23" height="25" />
+                </div>
               </li>
               <li>
-                <Link href={"/"} className="text-lg lg:text-2xl">
-                  Instagram
-                </Link>
+                <div className="flex flex-row  items-center">
+                  <Link
+                    href={"/"}
+                    className="text-medium tracking-menuSpacing font-slim hover:text-muted transition-all"
+                  >
+                    INSTAGRAM
+                  </Link>
+                  <Arrow width="23" height="25" />
+                </div>
               </li>
             </ul>
           </nav>
