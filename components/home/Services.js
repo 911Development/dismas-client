@@ -41,8 +41,12 @@ const Services = () => {
   return (
     <Container>
       <section id="services" className="w-full mb-96 select-none">
-        <section className="border rounded-full inline-block text-start px-8 py-1 mb-8">
-          <span className="font-[300] text-2xl lg:text-4xl">SERVICES</span>
+        <section className="flex items-center justify-start mb-10">
+          <section className="border rounded-full inline-block text-start px-8 py-2">
+            <span className="font-[300] text-large tracking-menuSpacing">
+              SERVICES
+            </span>
+          </section>
         </section>
         <section className="border rounded glass">
           {services.map((service) => (

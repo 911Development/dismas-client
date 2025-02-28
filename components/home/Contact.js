@@ -16,8 +16,8 @@ const Contact = () => {
         id="contact"
         className="flex items-center justify-center py-12"
       >
-        <section className="border rounded-full inline-block text-start px-8 py-1">
-          <span className="font-[300] text-2xl lg:text-4xl">
+        <section className="border rounded-full inline-block text-start px-8 py-2 mb-8">
+          <span className="font-[300] text-large tracking-menuSpacing">
             {t("nav_contact")}
           </span>
         </section>
@@ -35,7 +35,7 @@ const Contact = () => {
         <a
           href="mailto:DISMAS@STUDIO.COM"
           target="_blank"
-          className="text-3xl lg:text-6xl font-[300] hover:opacity-80 transition-all"
+          className="text-xlarge tracking-menuSpacing font-slim hover:text-muted hover:opacity-80 transition-all"
         >
           DISMAS@STUDIO.COM
         </a>
