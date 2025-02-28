@@ -4,9 +4,15 @@ import Container from "./Container";
 import SplashScreen from "@/pages/SplashScreen";
 import { useTranslation } from "react-i18next";
 import Arrow from "../public/TRY.svg";
+import { useEffect, useState } from "react";
 
 const Layout = ({ children }) => {
   const { t } = useTranslation();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
     <>
@@ -15,12 +21,16 @@ const Layout = ({ children }) => {
       <main className="select-none">{children}</main>
       <footer className="py-12">
         <Container className="flex !flex-row items-center justify-between px-0">
-          <p className="hidden lg:block text-medium tracking-menuSpacing font-slim hover:text-muted transition-all">
-            {t("footer_desc")}
-          </p>
-          {/* <p className="lg:hidden text-xl">{t("footer_desc_2")}</p> */}
+          {isClient ? (
+            <>
+              <p className="hidden lg:block text-medium tracking-menuSpacing font-slim hover:text-muted transition-all">{t("footer_desc")}</p>
+              {/* <p className="lg:hidden text-xl">{t("footer_desc_2")}</p> */}
+            </>
+          ) : (
+            <p className="text-medium">&nbsp;</p>
+          )}
           <nav>
-            <ul className="flex items-center justify-center gap-1 lg:gap-8">
+            <ul className="flex items-center justify-center gap-2 lg:gap-3">
               <li>
                 <div className="flex flex-row  items-center">
                   <Link

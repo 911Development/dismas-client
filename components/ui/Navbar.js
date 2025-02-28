@@ -50,7 +50,7 @@ const Navbar = () => {
           <ul className="hidden lg:flex space-x-12">
             {LINKS.map((link, index) => (
               <motion.li
-                key={index} // ✅ Add key for React
+                key={index}
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: [0, 1], scale: [0, 1] }}
                 exit={{ opacity: 1, scale: 1 }}
