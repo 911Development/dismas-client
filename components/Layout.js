@@ -23,14 +23,16 @@ const Layout = ({ children }) => {
         <Container className="flex !flex-row items-center justify-between px-0">
           {isClient ? (
             <>
-              <p className="hidden lg:block text-medium tracking-menuSpacing font-slim hover:text-muted transition-all">{t("footer_desc")}</p>
+              <p className="hidden lg:block text-medium tracking-menuSpacing font-slim hover:text-muted transition-all">
+                {t("footer_desc")}
+              </p>
               {/* <p className="lg:hidden text-xl">{t("footer_desc_2")}</p> */}
             </>
           ) : (
             <p className="text-medium">&nbsp;</p>
           )}
           <nav>
-            <ul className="flex items-center justify-center gap-2 lg:gap-3">
+            <ul className="flex items-center justify-center gap-2 lg:gap-10">
               <li>
                 <div className="flex flex-row  items-center">
                   <Link
