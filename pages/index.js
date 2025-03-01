@@ -158,7 +158,7 @@ export default function Home() {
                 ABOUT
               </span>
             </section>
-            <section>
+            <section className="font-slim leading-heroLine">
               {/* <p className="font-[200] lg:w-[60%] text-3xl lg:text-6xl mb-8 lg:mb-0 text-justify">
                 Dismas is more than our name, it’s a symbol of who we are and
                 what we stand for. Historically, mottos were war-cries of

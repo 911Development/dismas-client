@@ -20,7 +20,7 @@ const projects = [
     liveLink: "https://elliesmarthome.com/",
   },
   {
-    name: "Kıbrıs Evim",
+    name: "KIBRISEVİM",
     year: 2023,
     techStack: [
       "JavaScript",
@@ -34,7 +34,7 @@ const projects = [
     liveLink: "http://kibrisevim.com/",
   },
   {
-    name: "KibTaxi",
+    name: "KIBTAXI",
     year: 2024,
     techStack: [
       "JavaScript",
@@ -51,14 +51,14 @@ const projects = [
       "https://play.google.com/store/apps/details?id=com.kibtaxi.kibtaxi",
   },
   {
-    name: "UpGolf",
+    name: "UPGOLF",
     year: 2024,
     techStack: ["JavaScript", "React", "Next.js"],
     description: "upgolf_project_desc",
     liveLink: "https://upgolfclub.com/",
   },
   {
-    name: "DigitBuzz",
+    name: "DIGITBUZZ",
     year: 2025,
     techStack: [
       "JavaScript",
@@ -72,14 +72,14 @@ const projects = [
     liveLink: "https://digitbuzz.com/",
   },
   {
-    name: "Yıldız Taş",
+    name: "YILDIZTAŞ",
     year: 2025,
     techStack: ["JavaScript", "React", "Next.js", "Vite", "Figma"],
     description: "yildiztas_project_desc",
     liveLink: "https://www.yildiztasconstructions.com/",
   },
   {
-    name: "EmesGemi",
+    name: "EMESGEMİ",
     year: 2025,
     techStack: ["JavaScript", "React", "Next.js", "Vite", "Figma"],
     description: "emesgemi_project_desc",

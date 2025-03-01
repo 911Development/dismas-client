@@ -65,7 +65,7 @@ const Services = () => {
               <section className="col-span-4 text-3xl mb-4 last:mb-0 lg:mb-0">
                 {t(service.title)}
               </section>
-              <section className="col-span-7 text-justify text-muted">
+              <section className="col-span-7 text-justify text-medium font-slim">
                 {t(service.description)}
               </section>
             </motion.section>
