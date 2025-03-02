@@ -182,7 +182,7 @@ export default function Home() {
             alt="Dismas About"
             className="hidden lg:block w-[60%] absolute -bottom-1/2 right-0 translate-x-1/4 translate-y-1/2"
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: [0, 1] }}
+            // whileInView={{ opacity: [0, 1] }}
             transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
             viewport={{ once: true }}
             style={{ opacity }}
@@ -193,7 +193,7 @@ export default function Home() {
             alt="Dismas About"
             className="block lg:hidden w-[80%] mx-auto"
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: [0, 1] }}
+            // whileInView={{ opacity: [0, 1] }}
             transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
             viewport={{ once: true }}
             style={{ opacity }}
