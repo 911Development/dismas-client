@@ -50,12 +50,18 @@ export default function Home() {
   const aboutRef = useRef(null);
   const [lang, setLang] = useState(null);
 
+  const [mounted, setMounted] = useState(false);
+
   const { scrollYProgress } = useScroll({
-    target: aboutRef,
+    target: mounted ? aboutRef : null,
     offset: ["start end", "end start"],
   });
 
   const opacity = useTransform(scrollYProgress, [0.5, 1], ["100%", "0%"]);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (i18n.isInitialized) setLang(i18n.language);
@@ -184,7 +190,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             // whileInView={{ opacity: [0, 1] }}
             transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
-            viewport={{ once: true }}
+            // viewport={{ once: true }}
             style={{ opacity }}
           />
 
@@ -195,7 +201,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             // whileInView={{ opacity: [0, 1] }}
             transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
-            viewport={{ once: true }}
+            // viewport={{ once: true }}
             style={{ opacity }}
           />
         </section>
