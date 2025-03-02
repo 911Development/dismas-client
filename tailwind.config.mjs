@@ -42,6 +42,7 @@ export default {
       letterSpacing: {
         headerSpacing: "14px",
         menuSpacing: "4px",
+        textSpacing: "2px",
       },
       lineHeight: {
         heroLine: "1em",
@@ -59,6 +60,7 @@ export default {
 
       fontSize: {
         small: "1rem",
+        smallalt: "1.2rem",
         medium: "1.4rem",
         large: "1.8rem",
         xlarge: "4.5rem",

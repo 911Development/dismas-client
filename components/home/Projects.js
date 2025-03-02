@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { LinkPreview } from "../ui/link-preview";
 import Link from "next/link";
+import Arrow from "../../public/TRY.svg";
 
 const projects = [
   {
@@ -148,8 +149,8 @@ const Projects = () => {
               key={index}
               className="pb-6 border-gray-500 last:border-b-0 pt-6 hidden lg:block"
             >
-              <div className="opacity-0 flex justify-between items-center">
-                <h3 className="text-2xl font-semibold">{project.name}</h3>
+              <div className="opacity-0 flex justify-between items-center font-slim">
+                <h3 className="text-2xl">{project.name}</h3>
                 <a href={project.liveLink} target="_blank" className="text-2xl">
                   ↗
                 </a>
@@ -159,7 +160,9 @@ const Projects = () => {
                 style={{ translateX: hrWidth }}
                 className="border border-gray-500 h-[0.5px] w-full my-3"
               />
-              <p className="text-gray-400 mt-2 opacity-0">{project.year}</p>
+              <p className="text-gray-400 mt-2 text-medium opacity-0">
+                {project.year}
+              </p>
               <motion.hr
                 ref={hrRef}
                 style={{ translateX: hrWidth }}
@@ -169,7 +172,7 @@ const Projects = () => {
                 {project.techStack.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="border border-gray-500 px-3 py-1 rounded-full text-sm"
+                    className="border border-gray-500 px-3 py-1 rounded-full text-small"
                   >
                     {tech}
                   </span>
@@ -180,7 +183,7 @@ const Projects = () => {
                 style={{ translateX: hrWidth }}
                 className="border border-gray-500 h-[0.5px] w-full my-3"
               />
-              <p className="mt-4 text-gray-300 opacity-0">
+              <p className="mt-4 opacity-0 text-white text-smallalt font-slim tracking-textSpacing">
                 {t(project.description)}
               </p>
               <motion.hr
@@ -190,10 +193,10 @@ const Projects = () => {
               />
               <a
                 href={project.liveLink}
-                className="opacity-0 text-gray-400 hover:text-white mt-4 inline-block hover:underline transition-all"
+                className="opacity-0 text-gray-400 text-medium font-regular hover:text-white mt-4 inline-block hover:underline transition-all"
                 target="_blank"
               >
-                See it live →
+                SEE IT LIVE
               </a>
             </div>
           );
@@ -224,26 +227,28 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div key={index} className="pb-6 border-gray-500 pt-6">
             <div className="flex justify-between items-center">
-              <h3 className="text-2xl font-semibold">{project.name}</h3>
+              <h3 className="text-2xl font-regular">{project.name}</h3>
               <a href={project.liveLink} target="_blank" className="text-2xl">
-                ↗
+                <Arrow width="23" height="25" />
               </a>
             </div>
             <hr className="border border-gray-500 h-[0.5px] w-full my-3" />
-            <p className="text-gray-400 mt-2">{project.year}</p>
+            <p className="text-gray-400 mt-2 text-medium">{project.year}</p>
             <hr className="border border-gray-500 h-[0.5px] w-full my-3" />
             <div className="flex flex-wrap mt-2 gap-2">
               {project.techStack.map((tech, idx) => (
                 <span
                   key={idx}
-                  className="border border-gray-500 px-3 py-1 rounded-full text-sm"
+                  className="border border-gray-500 px-3 py-1 rounded-full text-small"
                 >
                   {tech}
                 </span>
               ))}
             </div>
             <hr className="border border-gray-500 h-[0.5px] w-full my-3" />
-            <p className="mt-4 text-gray-300">{t(project.description)}</p>
+            <p className="mt-4 text-white text-smallalt font-slim tracking-textSpacing">
+              {t(project.description)}
+            </p>
             <hr className="border border-gray-500 h-[0.5px] w-full my-3" />
             {/* <a
               href={project.liveLink}
@@ -255,9 +260,12 @@ const Projects = () => {
 
             <LinkPreview
               url={project.liveLink}
-              className="text-gray-400 hover:text-white mt-4 inline-block hover:underline transition-all"
+              className="text-gray-400 text-medium font-regular hover:text-white mt-4 inline-block hover:underline transition-all"
             >
-              {t("see_it_live")} →
+              <div className="flex flex-row items-center gap-2">
+                {t("see_it_live")}
+                <Arrow width="23" height="25" />
+              </div>
             </LinkPreview>
           </div>
         ))}
