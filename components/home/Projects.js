@@ -18,7 +18,7 @@ const projects = [
       "Next.js",
     ],
     description: "ellie_project_desc",
-    liveLink: "https://elliesmarthome.com/",
+    liveLink: "https://elliesmarthome.vercel.app/",
   },
   {
     name: "KIBRISEVİM",
