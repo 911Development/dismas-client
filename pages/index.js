@@ -2,14 +2,14 @@ import Container from "@/components/Container";
 import Projects from "@/components/home/Projects";
 import Head from "next/head";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { FlipWords } from "@/components/ui/flip-words";
 import Contact from "@/components/home/Contact";
 import Services from "@/components/home/Services";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "react-i18next";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const main_words_1_en = `
 Contact us for UI
@@ -47,9 +47,15 @@ const flip_words_tr = [
 export default function Home() {
   const { t, i18n } = useTranslation();
 
+  const aboutRef = useRef(null);
   const [lang, setLang] = useState(null);
 
-  console.log("lang: ", lang);
+  const { scrollYProgress } = useScroll({
+    target: aboutRef,
+    offset: ["start end", "end start"],
+  });
+
+  const opacity = useTransform(scrollYProgress, [0.5, 1], ["100%", "0%"]);
 
   useEffect(() => {
     if (i18n.isInitialized) setLang(i18n.language);
@@ -151,7 +157,7 @@ export default function Home() {
             <span>CREATIVE & DEVELOPMENT</span>
           </motion.div>
         </section>
-        <section id="about" className="relative my-96">
+        <section ref={aboutRef} id="about" className="relative my-96">
           <Container>
             <section className="border rounded-full me-auto px-8 py-2 mb-8">
               <span className="font-[300] text-large tracking-menuSpacing">
@@ -179,6 +185,7 @@ export default function Home() {
             whileInView={{ opacity: [0, 1] }}
             transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
             viewport={{ once: true }}
+            style={{ opacity }}
           />
 
           <motion.img
@@ -189,6 +196,7 @@ export default function Home() {
             whileInView={{ opacity: [0, 1] }}
             transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
             viewport={{ once: true }}
+            style={{ opacity }}
           />
         </section>
         <Services />

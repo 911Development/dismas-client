@@ -1,11 +1,8 @@
 import i18n from "./next-i18next.config.js";
 const nextConfig = {
   images: {
-    domains: [
-      "api.microlink.io", // Microlink Image Preview
-      "example.com", // Diğer domainleri buraya ekleyin
-    ],
-    formats: ["image/webp"], // Görsel formatlarını buraya ekleyin
+    domains: ["api.microlink.io", "example.com"],
+    formats: ["image/webp"],
   },
   i18n: i18n.i18n,
   webpack: (config, { isServer }) => {
