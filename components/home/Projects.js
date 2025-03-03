@@ -18,7 +18,7 @@ const projects = [
       "Next.js",
     ],
     description: "ellie_project_desc",
-    liveLink: "https://elliesmarthome.com/",
+    liveLink: "https://elliesmarthome.vercel.app/",
   },
   {
     name: "KIBRISEVİM",
@@ -56,7 +56,7 @@ const projects = [
     year: 2024,
     techStack: ["JavaScript", "React", "Next.js"],
     description: "upgolf_project_desc",
-    liveLink: "https://upgolfclub.com/",
+    liveLink: "https://upgolfclub.vercel.app/",
   },
   {
     name: "DIGITBUZZ",
@@ -84,7 +84,7 @@ const projects = [
     year: 2025,
     techStack: ["JavaScript", "React", "Next.js", "Vite", "Figma"],
     description: "emesgemi_project_desc",
-    liveLink: "http://emesgemi.com/",
+    liveLink: "https://emesgemi.com/",
   },
 ];
 
