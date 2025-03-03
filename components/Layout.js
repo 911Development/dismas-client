@@ -36,7 +36,8 @@ const Layout = ({ children }) => {
               <li>
                 <div className="flex flex-row  items-center">
                   <Link
-                    href={"/"}
+                    target="_blank"
+                    href={"https://www.linkedin.com/company/dismas-studio/"}
                     className="text-medium tracking-menuSpacing font-slim hover:text-muted transition-all"
                   >
                     LINKEDIN
@@ -47,7 +48,8 @@ const Layout = ({ children }) => {
               <li>
                 <div className="flex flex-row  items-center">
                   <Link
-                    href={"/"}
+                    target="_blank"
+                    href={"https://www.instagram.com/dismas.studio/"}
                     className="text-medium tracking-menuSpacing font-slim hover:text-muted transition-all"
                   >
                     INSTAGRAM
