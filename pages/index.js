@@ -71,7 +71,9 @@ export default function Home() {
 
   return (
     <>
-      <Head></Head>
+      <Head>
+        <title>DISMAS</title>
+      </Head>
       <section className="my-12">
         <Container>
           <section className="lg:grid lg:grid-cols-12 gap-4 mt-16 w-full">
