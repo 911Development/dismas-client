@@ -33,11 +33,11 @@ const Contact = () => {
         className="text-center py-12"
       >
         <a
-          href="mailto:DISMAS@STUDIO.COM"
+          href="mailto:contact@dismas.studio"
           target="_blank"
           className="text-xlarge tracking-menuSpacing font-slim hover:text-muted hover:opacity-80 transition-all"
         >
-          DISMAS@STUDIO.COM
+          CONTACT@DISMAS.STUDIO
         </a>
       </motion.section>
     </>
