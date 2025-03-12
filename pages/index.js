@@ -72,6 +72,7 @@ export default function Home() {
   return (
     <>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>DISMAS</title>
       </Head>
       <section className="my-12">
